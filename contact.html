@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I'm an aspiring graphic and UI/UX designer">
+    <meta name="description" content="web design, UX design, graphic design, art and design">
+    <meta name="description" content="Janie Kim">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/favicon.icon">
+    <title>Janie Kim / Design / Contact</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="skip"><a href="#main" tabindex="1">Skip to Main Content</a></div>
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li><a href="index.html" tabindex="2">ABOUT</a></li>
+                    <li><a href="work.html" tabindex="3">WORK</a></li>
+                    <li><a href="coursework.html" tabindex="4">COURSEWORK</a></li>
+                    <li class="current"><a href="contact.html" tabindex="5">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <header class="other-header">
+            <div class="header-text">
+                <h1 class="shadow">Hi, I'm Janie</h1>
+                <h2>I am an aspiring graphic and UI/UX designer</h2>
+            </div>
+        </header>
+        <div class="contact text-block">
+            <h2 class="main-h2" id="main">CONTACT</h2>
+            <div class="contact-imgs">
+                <div class="contact-img">
+                    <div class="flip-card" tabindex="6">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="img/contact-1.jpg" alt="yakisoba" style="width:350px;" />
+                            </div>
+                            <div class="flip-card-back">
+                                <h1><br>Seafood Avocado Yakisoba</h1>
+                                <p>Restaurant: WOOWAA</p>
+                                <p>Location: Shinsa-dong, Gangnam-gu, Seoul, South Korea</p>
+                                <p>Rating: &#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-img">
+                    <div class="flip-card" tabindex="7">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="img/contact-2.jpg" alt="avocado-burger-and-fries" style="width:350px;" />
+                            </div>
+                            <div class="flip-card-back">
+                                <h1><br>Avocado Burger &amp; <br> Garlic Butter Fries</h1>
+                                <p>Restaurant: Downtowner</p>
+                                <p>Location: 14, Dosan-daero 53-gil, Gangnam-gu, Seoul 06019, South Korea</p>
+                                <p>Rating: &#9733;&#9733;&#9733;&#9733;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Besides everything aforementioned, I love doodling, cooking, and eating! If you have any questions about my work or need recommendation for good restaurants in Seoul or Ann Arbor, email me or submit a message shown below.<br>
+                And lastly, thank you for visiting my website!</p>
+            <div class="contact-btns">
+                <a href="mailto:ywkim5964@gmail.com" class="contact-btn">E-MAIL
+                </a>
+            </div>
+            <div class="contact-form">
+                <h1>Contact Form</h1>
+                <form action="https://formspree.io/meqqaakr" method="POST">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your first and last name">
+                    <label for="email">Your Email Address</label>
+                    <input type="text" id="email" name="email" placeholder="Your e-mail address">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Your subject">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message" style="height:200px"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; Janie YeongWoo Kim</p>
+        </footer>
+    </div>
+
+    <script>
+        window.onscroll = function() {
+            stickyNav()
+        };
+        var nav = document.querySelector(".nav");
+        var sticky = nav.offsetTop;
+
+        function stickyNav() {
+            if (window.pageYOffset > sticky) {
+                nav.classList.add("sticky");
+            } else {
+                nav.classList.remove("sticky");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
