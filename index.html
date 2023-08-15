@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I'm an aspiring graphic and UI/UX designer">
+    <meta name="description" content="web design, UX design, graphic design, art and design">
+    <meta name="description" content="Janie Kim">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <title>Janie Kim / Design / Home</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="skip"><a href="#main" tabindex="1">Skip to Main Content</a></div>
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html" tabindex="2">ABOUT</a></li>
+                    <li><a href="work.html" tabindex="3">WORK</a></li>
+                    <li><a href="coursework.html" tabindex="4">COURSEWORK</a></li>
+                    <li><a href="contact.html" tabindex="5">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <header class=index-header>
+            <div class="header-text">
+                <h1 class="shadow">Hi, I'm Janie</h1>
+                <h2>I am an aspiring graphic and UI/UX designer</h2>
+            </div>
+        </header>
+        <div class="about text-block">
+            <h2 class="main-h2" id="main">ABOUT</h2>
+            <p>I am a sophomore at the University of Michigan pursuing a bachelor’s degree in Fine arts and a minor in Computer Science to become a graphic and UI/UX designer. I am interested in combining the aesthetic and the technical to create my unique form of art.<br>
+                I was born in Seoul, South Korea, and moved to China at the age of ten. In China, I attended a Korean international school, a Chinese local school, and an American international school. Now, I am studying in the states, where more cultural diversity exists. Having spent more than half of my life in such a global environment, I have become much more receptive to new ideas and "disruptive" in the sense that I strive to think outside of the box. I am confident that my international background can contribute positively to any community.<br> Below is a photo of me at the age of five! It is one of my favorite pictures of myself.</p>
+        </div>
+        <div class="about-img">
+            <img src="img/about.jpg" alt="about-img" />
+        </div>
+
+        <footer>
+            <p>&copy; Janie YeongWoo Kim</p>
+        </footer>
+    </div>
+    <script>
+        window.onscroll = function() {
+            stickyNav()
+        };
+        var nav = document.querySelector(".nav");
+        var sticky = nav.offsetTop;
+
+        function stickyNav() {
+            if (window.pageYOffset > sticky) {
+                nav.classList.add("sticky");
+            } else {
+                nav.classList.remove("sticky");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
