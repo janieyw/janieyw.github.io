@@ -369,20 +369,6 @@ header {
     margin: .2rem;
 }
 
-/* .course-work-img {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-} */
-
-/* .course-work-img img {
-    display: inline;
-    margin: .2rem;
-    max-width: 250px;
-} */
-
 /*contact*/
 .contact-btns {
     display: flex;
@@ -577,17 +563,6 @@ input[type=submit]:hover {
         display: block;
         margin: 0 auto;
     }
-
-    /* .course-work-img img {
-        display: block;
-        margin: .3rem;
-        max-height: 250px;
-    }
-
-    .course-work-img img:hover {
-        opacity: .5;
-        transition: .9s;
-    } */
 
     .about-img,
     .work-img,
