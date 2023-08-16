@@ -453,12 +453,13 @@ input[type=submit]:hover {
     background-color: #464646;
 }
 
-.contact-form h1 {
+.contact-form h2 {
     color: black;
     font-weight: 600;
     letter-spacing: .1rem;
     font-size: 1.4rem;
     padding: .3rem;
+    margin: 0;
 }
 
 .contact-form {
