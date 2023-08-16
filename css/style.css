@@ -8,6 +8,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* Typography */
@@ -58,7 +59,8 @@ h1 {
     justify-content: center;
 }
 
-.other-header h1, .other-header h2 {
+.other-header h1, 
+.other-header h2 {
     display: none;
 }
 
@@ -182,7 +184,8 @@ header {
 
 header {
     background-image: url("../img/header.jpg");
-    height: 15vh;
+    background-size: cover; 
+    height: 100vh;
     grid-column: -1 / 1;
     grid-row: 1 / 1;
 }
@@ -504,7 +507,7 @@ input[type=submit]:hover {
         /* grid-row-gap: 25px; */
         width: 100vw;
         overflow: auto;
-    overflow-x: hidden;
+        overflow-x: hidden;
     }
 
     .other-header h1 {
