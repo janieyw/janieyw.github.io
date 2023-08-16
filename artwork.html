@@ -10,7 +10,6 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <title>Janie Kim</title>
 </head>
-
 <body>
     <div class="container">
         <div class="skip"><a href="#main" tabindex="1">Skip to Main Content</a></div>
@@ -317,13 +316,12 @@
                 </div>
             </div>
         </div>
-
     </div>
     <footer>
-        <p>&copy; Janie YeongWoo Kim</p>
+        <p>Designed & Coded by Janie YeongWoo Kim <img src="img/logo.jpg" alt="logo" height="15"></p>
+        <!-- <p>&copy; Janie YeongWoo Kim</p> -->
     </footer>
 </div>
-
 <script>
     window.onscroll = function() {
         stickyNav()
@@ -338,26 +336,20 @@
             nav.classList.remove("sticky");
         }
     }
-
     function openModal() {
         document.getElementById("myModal").style.display = "block";
     }
-
     function closeModal() {
         document.getElementById("myModal").style.display = "none";
     }
-
     var slideIndex = 1;
     showSlides(slideIndex);
-
     function plusSlides(n) {
         showSlides(slideIndex += n);
     }
-
     function currentSlide(n) {
         showSlides(slideIndex = n);
     }
-
     function showSlides(n) {
         var i;
         var slides = document.getElementsByClassName("mySlides");

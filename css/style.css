@@ -479,14 +479,13 @@ input[type=submit]:hover {
         display: block;
         margin: 0 auto;
     }
-
     .about-img,
     .work-img {
         padding-bottom: 150px;
-    } 
+    }   
 }
 
-@media screen and (prefers-reduced-motion: reduce) {
+@media screen and (max-width: 767px) {
     .main-h2 {
         animation-name: none;
     }
@@ -494,4 +493,21 @@ input[type=submit]:hover {
         transition: none;
         -webkit-transition: none;
     }
+    .index-header {
+        background-image: url("../img/header_mobile.jpg");
+        height: 100vh;
+        grid-column: -1 / 1;
+        grid-row: 1 / 1;
+    }
+    header {
+        background-image: url("../img/header_mobile.jpg");
+        background-size: cover; 
+        height: 100vh;
+        grid-column: -1 / 1;
+        grid-row: 1 / 1;
+    }
+    .contact-btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
 }
