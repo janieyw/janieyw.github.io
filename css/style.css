@@ -163,10 +163,12 @@ header {
     padding-bottom: 80px;
 }
 .about-img img {
-    max-width: 100%;
+    max-width: 90%;
+    display: block;
+    margin: 0 auto;
 }
 .about-img img:hover {
-    filter: grayscale(100%);
+    filter: grayscale(70%);
     transition: 0.9s;
 }
 .column-imgs {
