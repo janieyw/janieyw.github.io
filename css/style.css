@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     font-family: 'Montserrat', sans-serif;
 }
@@ -9,9 +10,8 @@ body {
     padding: 0;
 }
 
-h1,
-h2,
-h3 {
+/* Typography */
+h1, h2, h3 {
     text-align: center;
 }
 
@@ -22,19 +22,14 @@ h1 {
 }
 
 .main-h2 {
-    animation-name: jump-animation;
-    animation-duration: 3.5s;
-    animation-timing-function: ease;
-    animation-delay: 1.5s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    letter-spacing: .2rem;
+    animation: jump-animation 3.5s ease 1.5s infinite normal;
+    letter-spacing: 0.2rem;
     /* padding-top: 70px; */
 }
 
 .shadow {
     color: white;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     text-shadow:
         0 -1px 0 #fff,
         0 1px 0 #2e2e2e,
@@ -47,12 +42,13 @@ h1 {
         0 8px 0 #202020;
 }
 
+/* Header Styles */
 .index-header h2 {
     font-size: 1.6rem;
     padding-top: 20px;
     color: white;
     font-weight: 300;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
 }
 
 .other-header {
@@ -62,34 +58,28 @@ h1 {
     justify-content: center;
 }
 
-.other-header h1 {
-    /* font-size: 2.5rem; */
+.other-header h1, .other-header h2 {
     display: none;
 }
 
-.other-header h2 {
-    display: none;
-}
-
+/* Heading Styles */
 h2 {
     font-size: 2rem;
     /* padding-top: 2rem; */
-    /* padding-bottom: .8rem; */
+    /* padding-bottom: 0.8rem; */
 }
 
 h3 {
     font-size: 1.4rem;
-    padding: 1rem 0 .5rem;
+    padding: 1rem 0 0.5rem;
 }
 
+/* Paragraph Styles */
 p {
     font-size: 1rem;
 }
 
-/* nav {
-    margin-top: 40px;
-} */
-
+/* Navigation Styles */
 nav ul {
     list-style-type: none;
 }
@@ -97,7 +87,7 @@ nav ul {
 nav li {
     display: inline;
     padding-right: 1.5rem;
-    letter-spacing: .05rem;
+    letter-spacing: 0.05rem;
 }
 
 nav a {
@@ -116,7 +106,6 @@ nav a:hover {
     padding: 6px;
     position: absolute;
     top: -40px;
-    -webkit-transition: top 1s ease-out;
     transition: top 1s ease-out;
     z-index: 1;
 }
@@ -125,6 +114,7 @@ nav a:hover {
     top: 0;
 }
 
+/* Footer Styles */
 footer {
     grid-column: 1 / -1;
     grid-row: 5 / 5;
@@ -133,14 +123,15 @@ footer {
     text-align: center;
 }
 
+/* Grid Container */
 .container {
     display: grid;
     grid-template-columns: 10% 80% 10%;
-    /* grid-row-gap: 10px; */
     grid-template-rows: auto 35px auto auto 50px;
     width: 100vw;
 }
 
+/* Navigation Container */
 .nav {
     align-self: center;
     text-align: center;
@@ -154,6 +145,7 @@ footer {
     color: black;
 }
 
+/* Sticky Navigation Bar */
 .sticky {
     background-color: white;
     position: fixed;
@@ -162,52 +154,50 @@ footer {
     z-index: 1;
 }
 
+/* Current Navigation Link */
 .current a {
     color: #8b0000;
     border-bottom: 3px solid #8b0000;
 }
 
-.index-header {
-    /* Parallax effect */
-    background-attachment: fixed;
-    background-image: url("../img/header.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    grid-column: -1 / 1;
-    grid-row: 1 / 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Header Styles */
+.index-header,
 header {
     /* Parallax effect */
     background-attachment: fixed;
-    background-image: url("../img/header.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 15vh;
-    grid-column: -1 / 1;
-    grid-row: 1 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.index-header {
+    background-image: url("../img/header.jpg");
+    height: 100vh;
+    grid-column: -1 / 1;
+    grid-row: 1 / 1;
+}
+
+header {
+    background-image: url("../img/header.jpg");
+    height: 15vh;
+    grid-column: -1 / 1;
+    grid-row: 1 / 1;
+}
+
+/* Content Sections */
 .about,
 .work,
-.course-work,
 .contact {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
 }
 
+/* Image Section Styles */
 .about-img,
-.work-img,
-.course-work-img {
+.work-img {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
     padding-bottom: 80px;
@@ -218,11 +208,11 @@ header {
 }
 
 .about-img img:hover {
-    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    transition: .9s;
+    transition: 0.9s;
 }
 
+/* Bottom Column Images */
 .column-imgs {
     position: fixed;
     bottom: 10px;
@@ -233,9 +223,8 @@ header {
     align-items: center;
 }
 
-
 .column-img {
-    margin: .2rem;
+    margin: 0.2rem;
 }
 
 /* The Modal (background) */
@@ -361,7 +350,7 @@ header {
     max-height: 300px;
     display: block;
     margin: 0 auto;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
 }
 
 .work-timg {
@@ -391,7 +380,6 @@ header {
     background-color: whitesmoke;
     font-size: 1.2rem;
     letter-spacing: .1rem;
-    line-height: 1.9rem;
     border-radius: 1.2rem;
     text-decoration: none;
     /*  top right bottom left*/
@@ -399,7 +387,7 @@ header {
     padding: .15rem 1.2rem;
     border: .09rem solid black;
     display: inline-block;
-    margin: 4rem 1rem 6rem 0;
+    margin: .5rem;
 }
 
 .contact-btn:hover {
@@ -454,9 +442,11 @@ input[type=submit]:hover {
     border-radius: .8rem;
     background-color: #f2f2f2;
     padding: 20px;
+    margin-bottom: 130px;
 }
 
 .notification {
+    margin-top: 5rem;
     color: red
 }
 
@@ -574,14 +564,12 @@ input[type=submit]:hover {
     }
 
     .about-img,
-    .work-img,
-    .course-work-img {
+    .work-img {
         padding-bottom: 150px;
     }
 }
 
 /*End the media query*/
-
 @media screen and (prefers-reduced-motion: reduce) {
     .main-h2 {
         animation-name: none;
