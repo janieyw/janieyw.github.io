@@ -20,6 +20,8 @@ h1 {
     font-size: 3.2rem;
     color: white;
     font-weight: 450;
+    animation: jump-animation 3.5s ease 1.5s infinite normal;
+    letter-spacing: 0.2rem;
 }
 
 .main-h2 {
