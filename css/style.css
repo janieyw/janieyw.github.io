@@ -171,6 +171,9 @@ header {
     filter: grayscale(70%);
     transition: 0.9s;
 }
+.gradphoto {
+    padding-bottom: 7px;
+}
 .column-imgs {
     position: fixed;
     bottom: 10px;
@@ -444,7 +447,7 @@ input[type=submit]:hover {
         height: 15vh;
     }
     .nav {
-        text-align:right;
+        text-align: right;
         display: inline;
         grid-column: 1 / -1;
     }
