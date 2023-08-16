@@ -326,11 +326,14 @@ header {
 }
 
 .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
     position: absolute;
     top: 0;
+    left: 0;
+    color: white;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 12px;
+    border-radius: 4px;
 }
 
 .caption-container {
@@ -349,11 +352,26 @@ header {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.mySlides img {
-    max-height: 300px;
-    display: block;
-    margin: 0 auto;
-    padding-bottom: 5%;
+.modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensure full height of modal content */
+}
+
+.image-container {
+    display: flex;
+    padding-bottom: 8%;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%; /* Ensure images don't exceed the container's width */
+    max-height: 100vh; /* Ensure images don't exceed the viewport height */
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Maintain aspect ratio and fit within container */
 }
 
 .work-timg {
