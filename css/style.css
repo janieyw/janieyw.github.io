@@ -41,7 +41,7 @@ h1 {
     padding-top: 20px;
     color: #FFFFFF;
     font-weight: 300;
-    letter-spacing: 0.1rem;
+    letter-spacing: .1rem;
 }
 .other-header {
     display: flex;
