@@ -491,9 +491,6 @@ input[type=submit]:hover {
 }
 
 @media screen and (max-width: 767px) {
-    .main-h2 {
-        animation-name: none;
-    }
     * {
         transition: none;
         -webkit-transition: none;
@@ -519,7 +516,8 @@ input[type=submit]:hover {
         grid-row: 1 / 1;
     }
     nav li {
-        padding-right: 0.8rem;
+        padding-right: 0.4rem;
+        padding-left: 0.4rem;
     }
     .nav {
         padding: 0;
