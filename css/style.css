@@ -60,6 +60,9 @@ h3 {
     font-size: 1.4rem;
     padding: 1rem 0 0.5rem;
 }
+.subheading {
+    padding: 0;
+}
 p {
     font-size: 1rem;
 }
@@ -152,11 +155,13 @@ header {
 }
 .about,
 .work,
+.portfolio
 .contact {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
 }
 .about-img,
+.portfolio-img,
 .work-img {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
