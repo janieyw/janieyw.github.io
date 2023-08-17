@@ -532,4 +532,7 @@ input[type=submit]:hover {
     .about-img img {
         max-width: 100%;
     }
+    .modal-content {
+        height: 85%;
+    }
 }
