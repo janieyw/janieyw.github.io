@@ -521,6 +521,9 @@ input[type=submit]:hover {
     nav li {
         padding-right: 0.8rem;
     }
+    .nav {
+        padding: 0;
+    }
     .contact-btns {
         display: flex;
         flex-direction: column;
