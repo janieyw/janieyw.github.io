@@ -155,14 +155,14 @@ header {
 }
 .about,
 .work,
-.portfolio
+.portfolio,
 .contact {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
 }
 .about-img,
-.portfolio-img,
-.work-img {
+.work-img,
+.portfolio-img {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
     padding-bottom: 80px;
@@ -175,6 +175,19 @@ header {
 .about-img img:hover {
     filter: grayscale(70%);
     transition: 0.9s;
+}
+.portfolio-img {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio-img img {
+    display: inline;
+    margin-right: .2rem;
+    margin-left: .2rem;
+    max-width: 250px;
 }
 .gradphoto {
     padding-bottom: 7px;
@@ -189,7 +202,7 @@ header {
     align-items: center;
 }
 .column-img {
-    margin: 0.2rem;
+    margin: .2rem;
 }
 .modal {
     display: none;
@@ -490,7 +503,8 @@ input[type=submit]:hover {
         margin: 0 auto;
     }
     .about-img,
-    .work-img {
+    .work-img,
+    .portfolio-img {
         padding-bottom: 150px;
     }   
 }
