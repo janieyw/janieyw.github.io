@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Janie Kim">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <title>Janie Kim</title>
+</head>
+<body>
+    <div class="container">
+        <div class="skip"><a href="#main" tabindex="1">Skip to Main Content</a></div>
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li><a href="index.html" tabindex="2">ABOUT</a></li>
+                    <li class="current"><a href="portfolio.html" tabindex="3">PORTFOLIO</a></li>
+                    <li><a href="art.html" tabindex="4">ART</a></li>
+                    <li><a href="contact.html" tabindex="5">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <header class="other-header">
+            <div class="header-text">
+                <h1 class="shadow">Hi, I'm Janie.</h1>
+                <h2>I love to code and create &#9786;</h2>
+            </div>
+        </header>
+        <div class="portfolio text-block">
+            <h2 class="main-h2" id="main">HCI Research Paper: “Are Some MRI Comfort Aids Better than Others?”</h2>
+            <div class="btns">
+                <a href="https://drive.google.com/file/d/1RlA3QMrtb1hQWQ5wFSwJrP6woNvrai9w/view?usp=sharing" class="paper-btn" target="_blank">View Research Paper</a>      
+            </div>
+            <div class="portfolio-text-block">
+                <div class="three-column">
+                    <div class="column">
+                        <h3 class="subheading">Team</h3>
+                        <p>Miranda Karger<br>
+                            Sahitya Raipura
+                        </p>
+                    </div>
+                    <div class="column">
+                        <h3 class="subheading">Tools</h3>
+                        <p></p>
+                    </div>
+                    <div class="column">
+                        <h3 class="subheading">Timeline</h3>
+                        <p>2 months<br>
+                            Feb. 17th - May 3rd, 2023</p>
+                    </div>
+                </div>
+                <h3 class="subheading">Brief</h3>
+                <h3 class="subheading">Problem</h3>
+                <h3 class="subheading">Contextual Inquiry</h3>
+            </div>
+        </div>
+        <footer>
+            <p>Designed & Coded by Janie Kim <img src="img/logo.jpg" alt="logo" height="15"></p>
+            <!-- <p>&copy; Janie YeongWoo Kim</p> -->
+        </footer>
+    </div>
+    <script>
+        window.onscroll = function() {
+            stickyNav()
+        };
+        var nav = document.querySelector(".nav");
+        var sticky = nav.offsetTop;
+        function stickyNav() {
+            if (window.pageYOffset > sticky) {
+                nav.classList.add("sticky");
+            } else {
+                nav.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+</html>

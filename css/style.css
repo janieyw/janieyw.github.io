@@ -353,13 +353,14 @@ header {
     margin-right: 1rem;
     text-align: center;
 }
-.contact-btns {
+.btns {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .contact-btn,
-.scroll-to-top-btn {
+.scroll-to-top-btn,
+.paper-btn {
     color: #000000;
     font-weight: 600;
     background-color: #F5F5F5;
@@ -375,7 +376,8 @@ header {
     margin: .5rem;
 }
 .contact-btn:hover,
-.scroll-to-top-btn:hover {
+.scroll-to-top-btn:hover,
+.paper-btn:hover  {
     color: #FFFFFF;
     background-color: #000000;
     opacity: .7;
@@ -558,7 +560,7 @@ input[type=submit]:hover {
     .nav {
         padding: 0;
     }
-    .contact-btns {
+    .btns {
         display: flex;
         flex-direction: column;
         align-items: center; 
