@@ -17,7 +17,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html" tabindex="2">ABOUT</a></li>
-                    <li><a href="portfolio.html" tabindex="3">PORTFOLIO</a></li>
+                    <li class="current"><a href="portfolio.html" tabindex="3">PORTFOLIO</a></li>
                     <li><a href="art.html" tabindex="4">ART</a></li>
                     <li><a href="contact.html" tabindex="5">CONTACT</a></li>
                 </ul>
@@ -29,26 +29,27 @@
                 <h2>I love to code and design &#9786;</h2>
             </div>
         </header>
-        <div class="portfolio-text-block">
+        <div class="portfolio text-block">
             <h2 class="main-h2" id="main">MuServe</h2>
-            <div class="three-column">
-                <div class="column">
-                    <h3 class="subheading">Team</h3>
-                    <p>Qiran Li<br>
-                        Nicole Balsirow<br>
-                        Sourya Kakarla
-                    </p>
-                </div>
-                <div class="column">
-                    <h3 class="subheading">Tools</h3>
-                    <p>ReactJS, Figma, Balsamiq</p>
-                </div>
-                <div class="column">
-                    <h3 class="subheading">Timeline</h3>
-                    <p>3 months<br>
-                        Oct 3rd - Dec 21st, 2023</p>
-                </div>
-            </div>            
+            <div class="portfolio-text-block">
+                <div class="three-column">
+                    <div class="column">
+                        <h3 class="subheading">Team</h3>
+                        <p>Qiran Li<br>
+                            Nicole Balsirow<br>
+                            Sourya Kakarla
+                        </p>
+                    </div>
+                    <div class="column">
+                        <h3 class="subheading">Tools</h3>
+                        <p>ReactJS, Figma, Balsamiq</p>
+                    </div>
+                    <div class="column">
+                        <h3 class="subheading">Timeline</h3>
+                        <p>3 months<br>
+                            Oct 3rd - Dec 21st, 2023</p>
+                    </div>
+                </div>            
                 <h3 class="subheading">Brief</h3>
                     <p>This project originated from a common challenge faced by music students at Columbia University—difficulties in accessing practice rooms. In response, a music practice helper tool was developed for Columbia students, affording them the following capabilities:</p>
                     <ul>
@@ -74,24 +75,36 @@
                 <h3 class="subheading">Final Prototype</h3>
                 <h3 class="subheading">Reflection</h3>
             </div>
-        </div>  
-        <div id="scroll-to-top" class="scroll-to-top">
+        </div>
+        <!-- <div id="scroll-to-top" class="scroll-to-top">
             <a href="#top" tabindex="-1" class="scroll-to-top-btn">Back to Top</a>
-        </div>    
+        </div>     -->
         <footer>
             <p>Designed & Coded by Janie Kim <img src="img/logo.jpg" alt="logo" height="15"></p>
             <!-- <p>&copy; Janie YeongWoo Kim</p> -->
         </footer>
     </div>
     <script>
-        var scrollToTopBtn = document.getElementById("scroll-to-top");
-        scrollToTopBtn.addEventListener("click", function(event) {
-            event.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
+        window.onscroll = function() {
+            stickyNav()
+        };
+        var nav = document.querySelector(".nav");
+        var sticky = nav.offsetTop;
+        function stickyNav() {
+            if (window.pageYOffset > sticky) {
+                nav.classList.add("sticky");
+            } else {
+                nav.classList.remove("sticky");
+            }
+        }
+        // var scrollToTopBtn = document.getElementById("scroll-to-top");
+        // scrollToTopBtn.addEventListener("click", function(event) {
+        //     event.preventDefault();
+        //     window.scrollTo({
+        //         top: 0,
+        //         behavior: "smooth"
+        //     });
+        // });
     </script>
 </body>
 </html>
