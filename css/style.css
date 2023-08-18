@@ -8,7 +8,7 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
     text-align: center;
 }
 h1 {
@@ -17,6 +17,9 @@ h1 {
     font-weight: 450;
     animation: jump-animation 3.5s ease infinite normal;
     letter-spacing: 0.2rem;
+}
+h4, h5 {
+    margin: .5rem;
 }
 .main-h2 {
     animation: jump-animation 3.5s ease infinite normal;
@@ -523,7 +526,8 @@ input[type=submit]:hover {
     }
     .about-img,
     .work-img,
-    .portfolio-img {
+    .portfolio-img,
+    .bottom-text {
         padding-bottom: 150px;
     }   
 }
