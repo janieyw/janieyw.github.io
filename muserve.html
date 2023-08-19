@@ -208,74 +208,112 @@
                         target="_blank">View Full Balsalmiq Prototype in PDF</a>      
                     </div>
                     <h4>Design Logics</h4>
-                    <ul style="padding: 0; margin: 0;">
-                        <li style="margin-left: 1em;"><strong>User Authentication and Email Confirmation</strong>:
-                            <ul>
-                                <li>Demand: Require Columbia students with valid UNIs. Optional email confirmation.</li>
-                                <li>Implementation: Mandatory UNI input, optional email confirmation checkbox.</li>
-                                <li>Possible Improvement: Shift confirmation checkbox to final confirmation page if needed.</li>
-                            </ul>
-                        </li>
-                        <li style="margin-left: 1em;"><strong>Interactive Map API</strong>:
-                            <ul>
-                                <li>Demand: Help new users locate halls and rooms.</li>
-                                <li>Implementation: Employ Google API for a dynamic map responsive to main functions.</li>
-                                <li>Possible Improvement: Include hover info or varied colors for building availability.</li>
-                            </ul>
-                        </li>
-                        <li style="margin-left: 1em;"><strong>2-Stage Filter Set + Map Response</strong>:
-                            <ul>
-                                <li>Demand: User control for room selection.</li>
-                                <li>Implementation: Two stages: filter initialization (building) and filter alteration (room), map updates 
-                                    accordingly.</li>
-                                <li>Possible Improvement: Add more filters based on user feedback.</li>
-                            </ul>
-                        </li>
-                        <li style="margin-left: 1em;"><strong>3-Color Availability Indication</strong>:
-                            <ul>
-                                <li>Demand: Clear room availability visibility.</li>
-                                <li>Implementation: Green (available now), orange (available later today), purple (available future date).</li>
-                                <li>Possible Improvement: Adjust colors based on feedback.</li>
-                            </ul>
-                        </li>
-                        <li style="margin-left: 1em;"><strong>3-Style Time Selection Option</strong>:
-                            <ul>
-                                <li>Demand: Diverse time slot selection.</li>
-                                <li>Implementation: Green room (current or non-current 30-min slot, customizable), orange room (non-current 
-                                    30-min slot, customizable), purple room (earliest available date).</li>
-                                <li>Possible Improvement: Vary default slot length.</li>
-                            </ul>
-                        </li>
-                        <li style="margin-left: 1em;"><strong>Aggregated Confirmation Page</strong>:
-                            <ul>
-                                <li>Demand: Provide comprehensive reservation info.</li>
-                                <li>Implementation: Display filters, building name, address, room code, time slot, etc.</li>
-                                <li>Possible Improvement: Expand details as needed.</li>
-                            </ul>
-                        </li>
-                        <li style="margin-left: 1em;"><strong>(Future) Check-In Functionality</strong>:
-                            <ul>
-                                <li>Demand: Allow room release if unchecked-in.</li>
-                                <li>Implementation: Options include QR code or geometry info with check-in link.</li>
-                            </ul>
-                        </li>
-                        <li style="margin-left: 1em;"><strong>(Future) Maximum Reserve Time</strong>:
-                            <ul>
-                                <li>Demand: Prevent excessive reservations.</li>
-                                <li>Implementation: Set a cap on weekly reservation time (e.g. 4 hours).</li>
-                            </ul>
-                        </li>
-                        <li style="margin-left: 1em;"><strong>(Future) Dashboard of Rush Hour</strong>:
-                            <ul>
-                                <li>Demand: Address user practice needs beyond reserved time.</li>
-                                <li>Implementation: Consider a rush hour dashboard for additional practice options.</li>
-                            </ul>
-                        </li>
-                    </ul>
+                        <ul style="padding: 0; margin: 0;">
+                            <li style="margin-left: 1em;"><strong>User Authentication and Email Confirmation</strong>:
+                                <ul>
+                                    <li>Demand: Require Columbia students with valid UNIs. Optional email confirmation.</li>
+                                    <li>Implementation: Mandatory UNI input, optional email confirmation checkbox.</li>
+                                    <li>Possible Improvement: Shift confirmation checkbox to final confirmation page if needed.</li>
+                                </ul>
+                            </li>
+                            <li style="margin-left: 1em;"><strong>Interactive Map API</strong>:
+                                <ul>
+                                    <li>Demand: Help new users locate halls and rooms.</li>
+                                    <li>Implementation: Employ Google API for a dynamic map responsive to main functions.</li>
+                                    <li>Possible Improvement: Include hover info or varied colors for building availability.</li>
+                                </ul>
+                            </li>
+                            <li style="margin-left: 1em;"><strong>2-Stage Filter Set + Map Response</strong>:
+                                <ul>
+                                    <li>Demand: User control for room selection.</li>
+                                    <li>Implementation: Two stages: filter initialization (building) and filter alteration (room), map updates 
+                                        accordingly.</li>
+                                    <li>Possible Improvement: Add more filters based on user feedback.</li>
+                                </ul>
+                            </li>
+                            <li style="margin-left: 1em;"><strong>3-Color Availability Indication</strong>:
+                                <ul>
+                                    <li>Demand: Clear room availability visibility.</li>
+                                    <li>Implementation: Green (available now), orange (available later today), purple (available future date).</li>
+                                    <li>Possible Improvement: Adjust colors based on feedback.</li>
+                                </ul>
+                            </li>
+                            <li style="margin-left: 1em;"><strong>3-Style Time Selection Option</strong>:
+                                <ul>
+                                    <li>Demand: Diverse time slot selection.</li>
+                                    <li>Implementation: Green room (current or non-current 30-min slot, customizable), orange room (non-current 
+                                        30-min slot, customizable), purple room (earliest available date).</li>
+                                    <li>Possible Improvement: Vary default slot length.</li>
+                                </ul>
+                            </li>
+                            <li style="margin-left: 1em;"><strong>Aggregated Confirmation Page</strong>:
+                                <ul>
+                                    <li>Demand: Provide comprehensive reservation info.</li>
+                                    <li>Implementation: Display filters, building name, address, room code, time slot, etc.</li>
+                                    <li>Possible Improvement: Expand details as needed.</li>
+                                </ul>
+                            </li>
+                            <li style="margin-left: 1em;"><strong>(Future) Check-In Functionality</strong>:
+                                <ul>
+                                    <li>Demand: Allow room release if unchecked-in.</li>
+                                    <li>Implementation: Options include QR code or geometry info with check-in link.</li>
+                                </ul>
+                            </li>
+                            <li style="margin-left: 1em;"><strong>(Future) Maximum Reserve Time</strong>:
+                                <ul>
+                                    <li>Demand: Prevent excessive reservations.</li>
+                                    <li>Implementation: Set a cap on weekly reservation time (e.g. 4 hours).</li>
+                                </ul>
+                            </li>
+                            <li style="margin-left: 1em;"><strong>(Future) Dashboard of Rush Hour</strong>:
+                                <ul>
+                                    <li>Demand: Address user practice needs beyond reserved time.</li>
+                                    <li>Implementation: Consider a rush hour dashboard for additional practice options.</li>
+                                </ul>
+                            </li>
+                        </ul>
                 <h3 class="subheading">User Study</h3>
                     <div class="btns">
                         <a href="https://drive.google.com/file/d/1IRYPSzKcXWAWMBzy1RMOZNEDw-TEadpR/view?usp=sharing" class="paper-btn" 
-                        target="_blank">View User Study Data & Notes</a>      
+                        target="_blank">View User Study Data & Notes</a>
+                    </div>
+                    <h4>Purpose</h4>
+                        <p>The evaluation aimed to reduce the risk of the project not addressing user concerns effectively. User-centered 
+                            design was emphasized, involving three participants embodying the target users. Their interaction with the 
+                            prototype yielded valuable feedback for future improvements.</p>
+                    <h4>Description of Evaluation Procedure</h4>
+                        <ul style="padding: 0; margin: 0;">
+                            <li style="margin-left: 1em;">Created screening questionnaire and recruited volunteers.</li>
+                            <li style="margin-left: 1em;">Selected users for low-fi prototype evaluation.</li>
+                            <li style="margin-left: 1em;">Conducted guided testing with user interaction.</li>
+                            <li style="margin-left: 1em;">Encouraged users to verbalize thoughts during prototype interaction.</li>
+                            <li style="margin-left: 1em;">Elicited post-session feedback on satisfaction, pain points and suggestions.</li>
+                            <li style="margin-left: 1em;">Analyzed average satisfaction score and feedback.</li>
+                            <li style="margin-left: 1em;">Compared notes for design improvement.</li>
+                        </ul>
+                    <h4>Key Insights & Future Project Direction</h4>
+                        <ul style="padding: 0; margin: 0;">
+                            <li style="margin-left: 1em;"><strong>Room Size Relevance</strong>:<br>User's lack of concern for room size → 
+                                Streamline UI by omitting room size details.</li>
+                            <li style="margin-left: 1em;"><strong>Filter-Drive Listings</strong>:<br>User preference for filter-matched 
+                                results → Rework room filtering for direct filter-matched outcomes.</li>
+                            <li style="margin-left: 1em;"><strong>Slot Availability Visualization</strong>:<br>Interest in "trend of free/busy 
+                                slots" → Implement color-coded indicators in time range tabs.</li>
+                            <li style="margin-left: 1em;"><strong>Enhanced Booking Constraints</strong>:<br>Suggestions on booking time limits 
+                                and duration caps → Evaluate for priority implementation.</li>
+                            <li style="margin-left: 1em;"><strong>Booking Confirmation</strong>:<br>User demand for booking confirmation 
+                                emails → Add booking confirmation emails.</li>
+                            <li style="margin-left: 1em;"><strong>QR Code Check-in</strong>:<br>User interest in QR code check-in with a 
+                                15-minute window → Consider QR code check-in with 15-minute window.</li>
+                            <li style="margin-left: 1em;"><strong>Piano Room Prioritization</strong>:<br>User preference for prioritized 
+                                piano room allocation → Explore profile-based features for priority users.</li>
+                            <li style="margin-left: 1em;"><strong>Expanded Reservation Scope</strong>:<br>Feedback on practice spaces beyond 
+                                piano rooms → Discuss adding other practice spaces.</li>
+                            <li style="margin-left: 1em;"><strong>UI Refinement:</strong><br>Identification of non-intuitive UI elements, 
+                                such as time range tabs → Refine non-intuitive UI elements.</li>
+                            <li style="margin-left: 1em;"><strong>'Need More Time' Feature Clarification</strong>:<br>User confusion → Address 
+                                confusion and benefits of the feature.</li>
+                        </ul>
                     </div>
                 <h3 class="subheading">Risk Analysis & Management</h3>
                 <h3 class="subheading">Prototype #3</h3>
