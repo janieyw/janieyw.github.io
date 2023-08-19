@@ -182,6 +182,7 @@ header {
     grid-row: 3 / 4;
 }
 .about-img,
+.portfolio-img,
 .work-img{
     grid-column: 2 / 3;
     grid-row: 4 / 5;
@@ -217,12 +218,6 @@ header {
 }
 .portfolio-img a:hover .image-tooltip {
     opacity: 1;
-}
-.process-img {
-    display: block;
-    margin: 0 auto;
-    display: flex; 
-    justify-content: center;
 }
 .process-img img {
     max-width: 60%;
