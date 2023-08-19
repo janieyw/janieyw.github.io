@@ -46,7 +46,7 @@
                     </div>
                     <div class="column">
                         <h3 class="subheading">Timeline</h3>
-                        <p>3 months<br>
+                        <p>3 months;<br>
                             Oct. 3rd - Dec. 21st, 2023</p>
                     </div>
                 </div>            
@@ -107,52 +107,54 @@
                                 enhancing collaboration.</li>
                         </ol>
                     <h4>Comparison of Two Potential Solutions</h4>
-                        <table>
-                            <tr>
-                                <th>Idea</th>
-                                <th>Pros</th>
-                                <th>Cons</th>
-                            </tr>
-                            <tr>
-                                <td>1. Reservation System</td>
-                                <td>
-                                    <ul style="padding: 0; margin: 0;">
-                                        <li style="margin-left: 1em;">Provides the most needed functionality: reservation.</li>
-                                        <li style="margin-left: 1em;">All APIs and interfaces are user-friendly and intuitive.</li>
-                                        <li style="margin-left: 1em;">Supplementary details such as building addresses and room attributes are 
-                                            included.</li>
-                                        <li style="margin-left: 1em;">Effortless operation and maintenance.</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul style="padding: 0; margin: 0;">
-                                        <li style="margin-left: 1em;">Lacks a socialization element; users need external apps for communication.</li>
-                                        <li style="margin-left: 1em;">Doesn't offer notifications, requiring manual room availability checks.</li>
-                                        <li style="margin-left: 1em;">Requires an added check-in mechanism to ensure accurate availability 
-                                            updates.</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2. Group Chat Connection</td>
-                                <td>
-                                    <ul style="padding: 0; margin: 0;">
-                                        <li style="margin-left: 1em;">Supports information sharing and quick discussions.</li>
-                                        <li style="margin-left: 1em;">Building and room details can be found in the "information tag" within 
-                                            channels.</li>
-                                        <li style="margin-left: 1em;">Notifications will keep users updated on tracked room status changes.</li>
-                                        <li style="margin-left: 1em;">Direct interaction with reserved slots is possible in discussions, notifying 
-                                            involved parties.</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul style="padding: 0; margin: 0;">
-                                        <li style="margin-left: 1em;">It might be a bit more intricate to use due to the expanded features.</li>
-                                        <li style="margin-left: 1em;">Supervisors handling updates might find more tasks due to the complex implementation.</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </table>
+                        <div class="table-container">
+                            <table>
+                                <tr>
+                                    <th>Idea</th>
+                                    <th>Pros</th>
+                                    <th>Cons</th>
+                                </tr>
+                                <tr>
+                                    <td>1. Reservation System</td>
+                                    <td>
+                                        <ul style="padding: 0; margin: 0;">
+                                            <li style="margin-left: 1em;">Provides the most needed functionality: reservation.</li>
+                                            <li style="margin-left: 1em;">All APIs and interfaces are user-friendly and intuitive.</li>
+                                            <li style="margin-left: 1em;">Supplementary details such as building addresses and room attributes are 
+                                                included.</li>
+                                            <li style="margin-left: 1em;">Effortless operation and maintenance.</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul style="padding: 0; margin: 0;">
+                                            <li style="margin-left: 1em;">Lacks a socialization element; users need external apps for communication.</li>
+                                            <li style="margin-left: 1em;">Doesn't offer notifications, requiring manual room availability checks.</li>
+                                            <li style="margin-left: 1em;">Requires an added check-in mechanism to ensure accurate availability 
+                                                updates.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2. Group Chat Connection</td>
+                                    <td>
+                                        <ul style="padding: 0; margin: 0;">
+                                            <li style="margin-left: 1em;">Supports information sharing and quick discussions.</li>
+                                            <li style="margin-left: 1em;">Building and room details can be found in the "information tag" within 
+                                                channels.</li>
+                                            <li style="margin-left: 1em;">Notifications will keep users updated on tracked room status changes.</li>
+                                            <li style="margin-left: 1em;">Direct interaction with reserved slots in discussions, notifying relevant 
+                                                parties.</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul style="padding: 0; margin: 0;">
+                                            <li style="margin-left: 1em;">It might be a bit more intricate to use due to the expanded features.</li>
+                                            <li style="margin-left: 1em;">Supervisors handling updates might find more tasks due to the complex implementation.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                     <h4>The Chosen Solution</h4>
                         <p>After thorough analysis, the decision was to move forward with the reservation system concept, due to its intuitive 
                             nature. Casual interactions with music students also revealed an existing comprehensive group chat involving almost 
@@ -308,7 +310,8 @@
                 <h3 class="subheading">Risks & Mitigation Strategies</h3>
                     <p>Outlined below are the key risks identified during the user study phase, along with the strategies in place to mitigate 
                         these risks as the project continues.</p>
-                    <table>
+                    <div class="table-container">
+                        <table>
                         <tr>
                             <th>Risk</th>
                             <th>Description</th>
@@ -363,114 +366,143 @@
                             </ul>
                             </td>
                         </tr>
-                    </table>
+                        </table>
+                    </div>
                 <h3 class="subheading">Prototype #3 (Figma)</h3>
                     <h4>Video Demo</h4>
                         <iframe src="https://drive.google.com/file/d/17RhXyhIRwR4rvJXAq8AwY1TvGUHALvvF/preview" style="width: 100%; 
                         aspect-ratio: 16/9;"></iframe>
                     <h4>Justification fo Design Choices</h4>
-                        <table>
-                            <tr>
-                                <th>Design Choice</th>
-                                <th>Explanation</th>
-                            </tr>
-                            <tr>
-                                <td>Color Scheme - 60-30-10 Rule
+                        <div class="table-container">
+                            <table>
+                                <tr>
+                                    <th>Design Choice</th>
+                                    <th>Explanation</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Color Scheme - 60-30-10 Rule<br>
+                                        <img src="img/design-choice_1.png" alt="design-choice" width="300">
+                                    </td>
+                                    <td>
+                                        <ul class="unindented-ul">
+                                            <li class="unindented-li">60%: Columbia blue (light blue) base color.</li>
+                                            <li class="unindented-li">30%: White for balance.</li>
+                                            <li class="unindented-li">10%: Dark blue for contrast.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Filters Sequence<br>
+                                        <img src="img/design-choice_2.png" alt="design-choice">
+                                    </td>
+                                    <td>
+                                        <ul class="unindented-ul">
+                                            <li class="unindented-li">Filters ordered: Date > Piano > Room Size (least significant due to individual users)</li> 
+                                        </ul> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Typeface Selection<br>
+                                        <img src="img/design-choice_3.png" alt="design-choice"><br>
+                                        <img src="img/design-choice_4.png" alt="design-choice">
+                                    </td>
+                                    <td><ul class="unindented-ul">
+                                            <li class="unindented-li">Logo: "Cizel" serif typeface resembling Trajan Pro, used in Columbia University's logo.</li>
+                                            <li class="unindented-li">Text: "Inter" sans-serif with minimal embellishments, akin to Helvetica, ensuring clarity and modernity.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Grid Layout - Asymmetric Design<br>
+                                        <img src="img/design-choice_5.png" alt="design-choice">
+                                    </td>
+                                    <td><ul class="unindented-ul">
+                                            <li class="unindented-li">Timeslot selection grid</li>
+                                            <li class="unindented-li">Room filters</li>
+                                            <li class="unindented-li">Hall selection tab</li>
+                                            <li class="unindented-li">Floor map for room location</li>
+                                            <li class="unindented-li">Selection information</li>
+                                        </ul></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Visual Hierarchy - Slot Selection Page<br>
+                                        <img src="img/design-choice_6.png" alt="design-choice">
+                                    </td>
+                                    <td>
+                                        <ol class="unindented-ul">
+                                            <li class="unindented-li">Grid view of halls based on filters</li>
+                                            <li class="unindented-li">Room filters</li>
+                                            <li class="unindented-li">Reference map for hall locations</li>
+                                            <li class="unindented-li">Header with logo and login button</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Visual Hierarchy - Home Page<br>
+                                        <img src="img/design-choice_7.png" alt="design-choice">
+                                    </td>
+                                    <td>
+                                        <ol class="unindented-ul">
+                                            <li class="unindented-li">Grid view of halls based on filters</li>
+                                            <li class="unindented-li">Room filters</li>
+                                            <li class="unindented-li">Reference map for hall locations</li>
+                                            <li class="unindented-li">Header with logo and login button</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                    Arrow for Time Slots<br>
+                                    <img src="img/design-choice_8.png" alt="design-choice">
                                 </td>
                                 <td>
                                     <ul class="unindented-ul">
-                                        <li class="unindented-li">60%: Columbia blue (light blue) base color.</li>
-                                        <li class="unindented-li">30%: White for balance.</li>
-                                        <li class="unindented-li">10%: Dark blue for contrast.</li>
+                                        <li class="unindented-li">Inserted arrow above horizontally scrollable time slot bars to indicate scrolling for additional time slots.</li>
                                     </ul>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td>Filters Sequence</td>
+                                </tr>
+                                <tr>
                                 <td>
-                                    <ul class="unindented-ul">
-                                        <li class="unindented-li">Filters ordered: Date > Piano > Room Size (least significant due to individual users)</li> 
-                                    </ul> 
+                                    Floor Number for Floor Plans<br>
+                                    <img src="img/design-choice_9.png" alt="design-choice">
                                 </td>
-                            </tr>
-                            <tr>
-                                <td>Typeface Selection</td>
                                 <td><ul class="unindented-ul">
-                                        <li class="unindented-li">Logo: "Cizel" serif typeface resembling Trajan Pro, used in Columbia University's logo.</li>
-                                        <li class="unindented-li">Text: "Inter" sans-serif with minimal embellishments, akin to Helvetica, ensuring clarity and modernity.</li>
+                                        <li class="unindented-li">Display floor plan below website title on left grid.</li>
+                                        <li class="unindented-li">Initially considered floor selection but learned all rooms are on the same floor for each hall.</li>
                                     </ul>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td>Grid Layout - Asymmetric Design</td>
-                                <td><ul class="unindented-ul">
-                                        <li class="unindented-li">Timeslot selection grid</li>
-                                        <li class="unindented-li">Room filters</li>
-                                        <li class="unindented-li">Hall selection tab</li>
-                                        <li class="unindented-li">Floor map for room location</li>
-                                        <li class="unindented-li">Selection information</li>
-                                    </ul></td>
-                            </tr>
-                            <tr>
-                                <td>Visual Hierarchy - Slot Selection Page</td>
-                                <td>
-                                    <ol class="unindented-ul">
-                                        <li class="unindented-li">Grid view of halls based on filters</li>
-                                        <li class="unindented-li">Room filters</li>
-                                        <li class="unindented-li">Reference map for hall locations</li>
-                                        <li class="unindented-li">Header with logo and login button</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Visual Hierarchy - Home Page</td>
-                                <td>
-                                    <ol class="unindented-ul">
-                                        <li class="unindented-li">Grid view of halls based on filters</li>
-                                        <li class="unindented-li">Room filters</li>
-                                        <li class="unindented-li">Reference map for hall locations</li>
-                                        <li class="unindented-li">Header with logo and login button</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                            <tr>
-                            <td>Arrow for Time Slots</td>
-                            <td>
-                                <ul class="unindented-ul">
-                                    <li class="unindented-li">Inserted arrow above horizontally scrollable time slot bars to indicate scrolling for additional time slots.</li>
-                                </ul>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td>Floor Number for Floor Plans</td>
-                            <td><ul class="unindented-ul">
-                                    <li class="unindented-li">Display floor plan below website title on left grid.</li>
-                                    <li class="unindented-li">Initially considered floor selection but learned all rooms are on the same floor for each hall.</li>
-                                </ul>
-                            </td>
-                            </tr>
-                        </table>
-                    <h4>Summary of Design Revision Process (Before vs. After)</h4>
+                                </tr>
+                            </table>
+                        </div>
+                    <h4>Summary of Revised Design (Before vs. After)</h4>
                     
                 <h3 class="subheading">New Risk & Mitigation Strategies</h3>
                     <p>Another risk emerged as the project progressed.</p>
-                    <table>
-                        <tr>
-                            <th>Risk</th>
-                            <th>Description</th>
-                            <th>Mitigation</th>
-                        </tr>
-                        <tr>
-                            <td>"Off-the-Shelf" Solution</td>
-                            <td>Risk of the solution becoming a generic reservation system, lacking distinctiveness.</td>
-                            <td>
-                            <ul class="unindented-ul">
-                                <li class="unindented-li">Enhance student-practice room alignment, possibly by improving filters and conducting user studies.</li>
-                                <li class="unindented-li">Explore better user-room matching approaches.</li>
-                            </ul>
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th>Risk</th>
+                                <th>Description</th>
+                                <th>Mitigation</th>
+                            </tr>
+                            <tr>
+                                <td>"Off-the-Shelf" Solution</td>
+                                <td>Risk of the solution becoming a generic reservation system, lacking distinctiveness.</td>
+                                <td>
+                                <ul class="unindented-ul">
+                                    <li class="unindented-li">Enhance student-practice room alignment, possibly by improving filters and conducting user studies.</li>
+                                    <li class="unindented-li">Explore better user-room matching approaches.</li>
+                                </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 <h3 class="subheading">Prototype #4 (Revised Hand-Drawn)</h3>
                     <div class="prototype-img">
                         <img src="img/revised-hand-drawn.jpg" alt="revised-hand-drawn-prototype" />
