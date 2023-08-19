@@ -157,15 +157,15 @@
                         <p>After thorough analysis, the decision was to move forward with the reservation system concept, due to its intuitive 
                             nature. Casual interactions with music students also revealed an existing comprehensive group chat involving almost 
                             all music majors, aligning with the second idea and impacting the decision.</p>
-                <h3 class="subheading">Prototype #1 (Lo-fi)</h3>
-                    <div class="lo-fi-img">
-                        <img src="img/lo-fi_1.jpg" alt="lo-fi-prototype" />
+                <h3 class="subheading">Prototype #1 (Hand-drawn)</h3>
+                    <div class="prototype-img">
+                        <img src="img/hand-drawn_1.jpg" alt="hand-drawn-prototype" />
                     </div>
-                    <div class="lo-fi-img">
-                        <img src="img/lo-fi_2.jpg" alt="lo-fi-prototype" />
+                    <div class="prototype-img">
+                        <img src="img/hand-drawn_2.jpg" alt="hand-drawn-prototype" />
                     </div>
-                    <div class="lo-fi-img">
-                        <img src="img/lo-fi_3.jpg" alt="lo-fi-prototype" />
+                    <div class="prototype-img">
+                        <img src="img/hand-drawn_3.jpg" alt="hand-drawn-prototype" />
                     </div>
                 <h3 class="subheading">Comparative Analysis</h3>
                     <p>A brief comparative analysis was conducted on the suggested solution, comparing it to two existing design solutions 
@@ -175,8 +175,108 @@
                         <a href="https://drive.google.com/file/d/1-zd6Qeo3FicDdfdEjbuX0HHEMmTMumNA/view?usp=sharing" class="paper-btn" 
                         target="_blank">View Comparative Analysis Doc</a>      
                     </div>
-                <h3 class="subheading">Prototype #2 (Lo-Fi)</h3>
+                <h3 class="subheading">Prototype #2 (Balsamiq)</h3>
+                    <p>Based on the hand-drawn prototype, an interactive low-fidelity version was crafted on Balsamiq. Its main purpose was to
+                        allow users to engage with the solution and offer feedback.</p>
+                    <div class="prototype-img">
+                        <img src="img/balsamiq_1.png" alt="balsalmiq-prototype" />
+                        <p>Verified Columbia students can book music rooms in various campus halls categorized by room size and features.
+                            User verification is done through UNI email.</p>
+                    </div>
+                    <div class="prototype-img">
+                        <img src="img/balsamiq_2.png" alt="balsalmiq-prototype" />
+                        <p>Map interface displays halls geographically. Rooms can be filtered based on criteria. Unavailable halls are visually 
+                            marked.</p>
+                    </div>
+                    <div class="prototype-img">
+                        <img src="img/balsamiq_3.png" alt="balsalmiq-prototype" />
+                        <p>A table showcases hall info and available rooms with features. "Latest Slot" tab shows room availability with 
+                            color-coded grids. Left tabs allow further filtering (e.g., "Piano", "Stands"). "Other Slot" option for future 
+                            bookings.</p>
+                    </div>
+                    <div class="prototype-img">
+                        <img src="img/balsamiq_4.png" alt="balsalmiq-prototype" />
+                        <p>Room selection leads to choosing 30-min slots and confirmation. "Need More Time?" offers flexible duration 
+                            options.</p>
+                    </div>
+                    <div class="prototype-img">
+                        <img src="img/balsamiq_5.png" alt="balsalmiq-prototype" />
+                        <p>Booking confirmation screen displays room, hall, features, and check-in link.</p>
+                    </div>
+                    <div class="btns">
+                        <a href="https://drive.google.com/file/d/1vYGa4bDw-XeDft4chvxCDZEyRpAQRr5Z/view?usp=sharing" class="paper-btn" 
+                        target="_blank">View Full Balsalmiq Prototype in PDF</a>      
+                    </div>
+                    <h4>Design Logics</h4>
+                    <ul style="padding: 0; margin: 0;">
+                        <li style="margin-left: 1em;"><strong>User Authentication and Email Confirmation</strong>:
+                            <ul>
+                                <li>Demand: Require Columbia students with valid UNIs. Optional email confirmation.</li>
+                                <li>Implementation: Mandatory UNI input, optional email confirmation checkbox.</li>
+                                <li>Possible Improvement: Shift confirmation checkbox to final confirmation page if needed.</li>
+                            </ul>
+                        </li>
+                        <li style="margin-left: 1em;"><strong>Interactive Map API</strong>:
+                            <ul>
+                                <li>Demand: Help new users locate halls and rooms.</li>
+                                <li>Implementation: Employ Google API for a dynamic map responsive to main functions.</li>
+                                <li>Possible Improvement: Include hover info or varied colors for building availability.</li>
+                            </ul>
+                        </li>
+                        <li style="margin-left: 1em;"><strong>2-Stage Filter Set + Map Response</strong>:
+                            <ul>
+                                <li>Demand: User control for room selection.</li>
+                                <li>Implementation: Two stages: filter initialization (building) and filter alteration (room), map updates 
+                                    accordingly.</li>
+                                <li>Possible Improvement: Add more filters based on user feedback.</li>
+                            </ul>
+                        </li>
+                        <li style="margin-left: 1em;"><strong>3-Color Availability Indication</strong>:
+                            <ul>
+                                <li>Demand: Clear room availability visibility.</li>
+                                <li>Implementation: Green (available now), orange (available later today), purple (available future date).</li>
+                                <li>Possible Improvement: Adjust colors based on feedback.</li>
+                            </ul>
+                        </li>
+                        <li style="margin-left: 1em;"><strong>3-Style Time Selection Option</strong>:
+                            <ul>
+                                <li>Demand: Diverse time slot selection.</li>
+                                <li>Implementation: Green room (current or non-current 30-min slot, customizable), orange room (non-current 
+                                    30-min slot, customizable), purple room (earliest available date).</li>
+                                <li>Possible Improvement: Vary default slot length.</li>
+                            </ul>
+                        </li>
+                        <li style="margin-left: 1em;"><strong>Aggregated Confirmation Page</strong>:
+                            <ul>
+                                <li>Demand: Provide comprehensive reservation info.</li>
+                                <li>Implementation: Display filters, building name, address, room code, time slot, etc.</li>
+                                <li>Possible Improvement: Expand details as needed.</li>
+                            </ul>
+                        </li>
+                        <li style="margin-left: 1em;"><strong>(Future) Check-In Functionality</strong>:
+                            <ul>
+                                <li>Demand: Allow room release if unchecked-in.</li>
+                                <li>Implementation: Options include QR code or geometry info with check-in link.</li>
+                            </ul>
+                        </li>
+                        <li style="margin-left: 1em;"><strong>(Future) Maximum Reserve Time</strong>:
+                            <ul>
+                                <li>Demand: Prevent excessive reservations.</li>
+                                <li>Implementation: Set a cap on weekly reservation time (e.g. 4 hours).</li>
+                            </ul>
+                        </li>
+                        <li style="margin-left: 1em;"><strong>(Future) Dashboard of Rush Hour</strong>:
+                            <ul>
+                                <li>Demand: Address user practice needs beyond reserved time.</li>
+                                <li>Implementation: Consider a rush hour dashboard for additional practice options.</li>
+                            </ul>
+                        </li>
+                    </ul>
                 <h3 class="subheading">User Study</h3>
+                    <div class="btns">
+                        <a href="https://drive.google.com/file/d/1IRYPSzKcXWAWMBzy1RMOZNEDw-TEadpR/view?usp=sharing" class="paper-btn" 
+                        target="_blank">View User Study Data & Notes</a>      
+                    </div>
                 <h3 class="subheading">Risk Analysis & Management</h3>
                 <h3 class="subheading">Prototype #3</h3>
                 <h3 class="subheading">Risk Analysis & Management</h3>
