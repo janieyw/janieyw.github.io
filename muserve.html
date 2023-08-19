@@ -208,22 +208,22 @@
                         target="_blank">View Full Balsalmiq Prototype in PDF</a>      
                     </div>
                     <h4>Design Logics</h4>
-                        <ul style="padding: 0; margin: 0;">
-                            <li style="margin-left: 1em;"><strong>User Authentication and Email Confirmation</strong>:
+                        <ul class="unindented-ul">
+                            <li class="unindented-li"><strong>User Authentication and Email Confirmation</strong>:
                                 <ul>
                                     <li>Demand: Require Columbia students with valid UNIs. Optional email confirmation.</li>
                                     <li>Implementation: Mandatory UNI input, optional email confirmation checkbox.</li>
                                     <li>Possible Improvement: Shift confirmation checkbox to final confirmation page if needed.</li>
                                 </ul>
                             </li>
-                            <li style="margin-left: 1em;"><strong>Interactive Map API</strong>:
+                            <li class="unindented-li"><strong>Interactive Map API</strong>:
                                 <ul>
                                     <li>Demand: Help new users locate halls and rooms.</li>
                                     <li>Implementation: Employ Google API for a dynamic map responsive to main functions.</li>
                                     <li>Possible Improvement: Include hover info or varied colors for building availability.</li>
                                 </ul>
                             </li>
-                            <li style="margin-left: 1em;"><strong>2-Stage Filter Set + Map Response</strong>:
+                            <li class="unindented-li"><strong>2-Stage Filter Set + Map Response</strong>:
                                 <ul>
                                     <li>Demand: User control for room selection.</li>
                                     <li>Implementation: Two stages: filter initialization (building) and filter alteration (room), map updates 
@@ -231,14 +231,14 @@
                                     <li>Possible Improvement: Add more filters based on user feedback.</li>
                                 </ul>
                             </li>
-                            <li style="margin-left: 1em;"><strong>3-Color Availability Indication</strong>:
+                            <li class="unindented-li"><strong>3-Color Availability Indication</strong>:
                                 <ul>
                                     <li>Demand: Clear room availability visibility.</li>
                                     <li>Implementation: Green (available now), orange (available later today), purple (available future date).</li>
                                     <li>Possible Improvement: Adjust colors based on feedback.</li>
                                 </ul>
                             </li>
-                            <li style="margin-left: 1em;"><strong>3-Style Time Selection Option</strong>:
+                            <li class="unindented-li"><strong>3-Style Time Selection Option</strong>:
                                 <ul>
                                     <li>Demand: Diverse time slot selection.</li>
                                     <li>Implementation: Green room (current or non-current 30-min slot, customizable), orange room (non-current 
@@ -246,26 +246,26 @@
                                     <li>Possible Improvement: Vary default slot length.</li>
                                 </ul>
                             </li>
-                            <li style="margin-left: 1em;"><strong>Aggregated Confirmation Page</strong>:
+                            <li class="unindented-li"><strong>Aggregated Confirmation Page</strong>:
                                 <ul>
                                     <li>Demand: Provide comprehensive reservation info.</li>
                                     <li>Implementation: Display filters, building name, address, room code, time slot, etc.</li>
                                     <li>Possible Improvement: Expand details as needed.</li>
                                 </ul>
                             </li>
-                            <li style="margin-left: 1em;"><strong>(Future) Check-In Functionality</strong>:
+                            <li class="unindented-li"><strong>(Future) Check-In Functionality</strong>:
                                 <ul>
                                     <li>Demand: Allow room release if unchecked-in.</li>
                                     <li>Implementation: Options include QR code or geometry info with check-in link.</li>
                                 </ul>
                             </li>
-                            <li style="margin-left: 1em;"><strong>(Future) Maximum Reserve Time</strong>:
+                            <li class="unindented-li"><strong>(Future) Maximum Reserve Time</strong>:
                                 <ul>
                                     <li>Demand: Prevent excessive reservations.</li>
                                     <li>Implementation: Set a cap on weekly reservation time (e.g. 4 hours).</li>
                                 </ul>
                             </li>
-                            <li style="margin-left: 1em;"><strong>(Future) Dashboard of Rush Hour</strong>:
+                            <li class="unindented-li"><strong>(Future) Dashboard of Rush Hour</strong>:
                                 <ul>
                                     <li>Demand: Address user practice needs beyond reserved time.</li>
                                     <li>Implementation: Consider a rush hour dashboard for additional practice options.</li>
@@ -282,27 +282,27 @@
                             design was emphasized, involving three participants embodying the target users. Their interaction with the 
                             prototype yielded valuable feedback for future improvements.</p>
                     <h4>Description of Evaluation Procedure</h4>
-                        <ul style="padding: 0; margin: 0;">
-                            <li style="margin-left: 1em;">Created screening questionnaire and recruited volunteers.</li>
-                            <li style="margin-left: 1em;">Selected users for low-fi prototype evaluation.</li>
-                            <li style="margin-left: 1em;">Conducted guided testing with user interaction.</li>
-                            <li style="margin-left: 1em;">Encouraged users to verbalize thoughts during prototype interaction.</li>
-                            <li style="margin-left: 1em;">Elicited post-session feedback on satisfaction, pain points and suggestions.</li>
-                            <li style="margin-left: 1em;">Analyzed average satisfaction score and feedback.</li>
-                            <li style="margin-left: 1em;">Compared notes for design improvement.</li>
+                        <ul class="unindented-ul">
+                            <li class="unindented-li">Created screening questionnaire and recruited volunteers.</li>
+                            <li class="unindented-li">Selected users for low-fi prototype evaluation.</li>
+                            <li class="unindented-li">Conducted guided testing with user interaction.</li>
+                            <li class="unindented-li">Encouraged users to verbalize thoughts during prototype interaction.</li>
+                            <li class="unindented-li">Elicited post-session feedback on satisfaction, pain points and suggestions.</li>
+                            <li class="unindented-li">Analyzed average satisfaction score and feedback.</li>
+                            <li class="unindented-li">Compared notes for design improvement.</li>
                         </ul>
                     <h4>Key Insights & Future Project Direction</h4>
-                        <ul style="padding: 0; margin: 0;">
-                            <li style="margin-left: 1em;"><strong>Room Size Perspective:</strong> Streamline UI by omitting room size details.</li>
-                            <li style="margin-left: 1em;"><strong>Optimized Filter Logic:</strong> Rework room filtering for direct filter-matched results.</li>
-                            <li style="margin-left: 1em;"><strong>Visualizing Slot Availability:</strong> Implement color-coded indicators in time range tabs.</li>
-                            <li style="margin-left: 1em;"><strong>Refined Booking Rules:</strong> Assess booking time limits and duration caps for priority.</li>
-                            <li style="margin-left: 1em;"><strong>Booking Confirmation Enhancement:</strong> Add booking confirmation emails.</li>
-                            <li style="margin-left: 1em;"><strong>QR Code Check-in Solution:</strong> Consider QR code check-in with 15-minute window.</li>
-                            <li style="margin-left: 1em;"><strong>Prioritized Piano Room Allocation:</strong> Explore profile-based features for priority users.</li>
-                            <li style="margin-left: 1em;"><strong>Scope Expansion Consideration:</strong> Discuss adding other practice spaces.</li>
-                            <li style="margin-left: 1em;"><strong>UI Clarity Improvement:</strong> Refine non-intuitive UI elements, such as time range tabs.</li>
-                            <li style="margin-left: 1em;"><strong>'Need More Time' Clarification:</strong> Address confusion and benefits of the feature.</li>
+                        <ul class="unindented-ul">
+                            <li class="unindented-li"><strong>Room Size Perspective:</strong> Streamline UI by omitting room size details.</li>
+                            <li class="unindented-li"><strong>Optimized Filter Logic:</strong> Rework room filtering for direct filter-matched results.</li>
+                            <li class="unindented-li"><strong>Visualizing Slot Availability:</strong> Implement color-coded indicators in time range tabs.</li>
+                            <li class="unindented-li"><strong>Refined Booking Rules:</strong> Assess booking time limits and duration caps for priority.</li>
+                            <li class="unindented-li"><strong>Booking Confirmation Enhancement:</strong> Add booking confirmation emails.</li>
+                            <li class="unindented-li"><strong>QR Code Check-in Solution:</strong> Consider QR code check-in with 15-minute window.</li>
+                            <li class="unindented-li"><strong>Prioritized Piano Room Allocation:</strong> Explore profile-based features for priority users.</li>
+                            <li class="unindented-li"><strong>Scope Expansion Consideration:</strong> Discuss adding other practice spaces.</li>
+                            <li class="unindented-li"><strong>UI Clarity Improvement:</strong> Refine non-intuitive UI elements, such as time range tabs.</li>
+                            <li class="unindented-li"><strong>'Need More Time' Clarification:</strong> Address confusion and benefits of the feature.</li>
                         </ul>
                     </div>
                 <h3 class="subheading">Risks & Mitigation Strategies</h3>
@@ -318,9 +318,9 @@
                             <td>Lack of Users</td>
                             <td>Project failure due to insufficient user adoption.</td>
                             <td>
-                            <ul style="padding: 0; margin: 0;">
-                                <li style="margin-left: 1em;">Partner with music department for broader promotion.</li>
-                                <li style="margin-left: 1em;">Send promotional emails campus-wide.</li>
+                            <ul class="unindented-ul">
+                                <li class="unindented-li">Partner with music department for broader promotion.</li>
+                                <li class="unindented-li">Send promotional emails campus-wide.</li>
                             </ul>
                             </td>
                         </tr>
@@ -328,9 +328,9 @@
                             <td>Balance Between Majors</td>
                             <td>Difficulty in maintaining fair access for music and non-music majors.</td>
                             <td>
-                            <ul style="padding: 0; margin: 0;">
-                                <li style="margin-left: 1em;">Analyze room usage ratios.</li>
-                                <li style="margin-left: 1em;">Consult music department and stakeholders for insights.</li>
+                            <ul class="unindented-ul">
+                                <li class="unindented-li">Analyze room usage ratios.</li>
+                                <li class="unindented-li">Consult music department and stakeholders for insights.</li>
                             </ul>
                             </td>
                         </tr>
@@ -338,8 +338,8 @@
                             <td>Technical Expertise</td>
                             <td>Limited experience in web and application development.</td>
                             <td>
-                            <ul style="padding: 0; margin: 0;">
-                                <li style="margin-left: 1em;">Leverage available resources online and on campus.</li>
+                            <ul class="unindented-ul">
+                                <li class="unindented-li">Leverage available resources online and on campus.</li>
                             </ul>
                             </td>
                         </tr>
@@ -347,9 +347,9 @@
                             <td>Project Timeliness</td>
                             <td>Possible delays in project completion.</td>
                             <td>
-                            <ul style="padding: 0; margin: 0;">
-                                <li style="margin-left: 1em;">Foster continuous communication through Slack.</li>
-                                <li style="margin-left: 1em;">Adjust deadlines when necessary based on workflow.</li>
+                            <ul class="unindented-ul">
+                                <li class="unindented-li">Foster continuous communication through Slack.</li>
+                                <li class="unindented-li">Adjust deadlines when necessary based on workflow.</li>
                             </ul>
                             </td>
                         </tr>
@@ -357,9 +357,9 @@
                             <td>Bias and Design Focus</td>
                             <td>Project direction influenced by initial bias towards a reservation system.</td>
                             <td>
-                            <ul style="padding: 0; margin: 0;">
-                                <li style="margin-left: 1em;">Engage in continuous reflection and questioning of design choices.</li>
-                                <li style="margin-left: 1em;">Seek diverse feedback from mentors and experts.</li>
+                            <ul class="unindented-ul">
+                                <li class="unindented-li">Engage in continuous reflection and questioning of design choices.</li>
+                                <li class="unindented-li">Seek diverse feedback from mentors and experts.</li>
                             </ul>
                             </td>
                         </tr>
@@ -369,6 +369,87 @@
                         <iframe src="https://drive.google.com/file/d/17RhXyhIRwR4rvJXAq8AwY1TvGUHALvvF/preview" style="width: 100%; 
                         aspect-ratio: 16/9;"></iframe>
                     <h4>Justification fo Design Choices</h4>
+                        <table>
+                            <tr>
+                                <th>Design Choice</th>
+                                <th>Explanation</th>
+                            </tr>
+                            <tr>
+                                <td>Color Scheme - 60-30-10 Rule
+                                </td>
+                                <td>
+                                    <ul class="unindented-ul">
+                                        <li class="unindented-li">60%: Columbia blue (light blue) base color.</li>
+                                        <li class="unindented-li">30%: White for balance.</li>
+                                        <li class="unindented-li">10%: Dark blue for contrast.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Filters Sequence</td>
+                                <td>
+                                    <ul class="unindented-ul">
+                                        <li class="unindented-li">Filters ordered: Date > Piano > Room Size (least significant due to individual users)</li> 
+                                    </ul> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Typeface Selection</td>
+                                <td><ul class="unindented-ul">
+                                        <li class="unindented-li">Logo: "Cizel" serif typeface resembling Trajan Pro, used in Columbia University's logo.</li>
+                                        <li class="unindented-li">Text: "Inter" sans-serif with minimal embellishments, akin to Helvetica, ensuring clarity and modernity.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Grid Layout - Asymmetric Design</td>
+                                <td><ul class="unindented-ul">
+                                        <li class="unindented-li">Timeslot selection grid</li>
+                                        <li class="unindented-li">Room filters</li>
+                                        <li class="unindented-li">Hall selection tab</li>
+                                        <li class="unindented-li">Floor map for room location</li>
+                                        <li class="unindented-li">Selection information</li>
+                                    </ul></td>
+                            </tr>
+                            <tr>
+                                <td>Visual Hierarchy - Slot Selection Page</td>
+                                <td>
+                                    <ol class="unindented-ul">
+                                        <li class="unindented-li">Grid view of halls based on filters</li>
+                                        <li class="unindented-li">Room filters</li>
+                                        <li class="unindented-li">Reference map for hall locations</li>
+                                        <li class="unindented-li">Header with logo and login button</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Visual Hierarchy - Home Page</td>
+                                <td>
+                                    <ol class="unindented-ul">
+                                        <li class="unindented-li">Grid view of halls based on filters</li>
+                                        <li class="unindented-li">Room filters</li>
+                                        <li class="unindented-li">Reference map for hall locations</li>
+                                        <li class="unindented-li">Header with logo and login button</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                            <td>Arrow for Time Slots</td>
+                            <td>
+                                <ul class="unindented-ul">
+                                    <li class="unindented-li">Inserted arrow above horizontally scrollable time slot bars to indicate scrolling for additional time slots.</li>
+                                </ul>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td>Floor Number for Floor Plans</td>
+                            <td><ul class="unindented-ul">
+                                    <li class="unindented-li">Display floor plan below website title on left grid.</li>
+                                    <li class="unindented-li">Initially considered floor selection but learned all rooms are on the same floor for each hall.</li>
+                                </ul>
+                            </td>
+                            </tr>
+                        </table>
                     <h4>Summary of Design Revision Process (Before vs. After)</h4>
                     
                 <h3 class="subheading">New Risk & Mitigation Strategies</h3>
@@ -383,9 +464,9 @@
                             <td>"Off-the-Shelf" Solution</td>
                             <td>Risk of the solution becoming a generic reservation system, lacking distinctiveness.</td>
                             <td>
-                            <ul style="padding: 0; margin: 0;">
-                                <li style="margin-left: 1em;">Enhance student-practice room alignment, possibly by improving filters and conducting user studies.</li>
-                                <li style="margin-left: 1em;">Explore better user-room matching approaches.</li>
+                            <ul class="unindented-ul">
+                                <li class="unindented-li">Enhance student-practice room alignment, possibly by improving filters and conducting user studies.</li>
+                                <li class="unindented-li">Explore better user-room matching approaches.</li>
                             </ul>
                             </td>
                         </tr>

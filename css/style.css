@@ -87,6 +87,14 @@ th {
     text-align: center;
     background-color: #E9E9E9;
 }
+
+.unindented-ul {
+    padding: 0; 
+    margin: 0;
+}
+.unindented-li {
+    margin-left: 1em;
+}
 nav ul {
     list-style-type: none;
     margin: 0;
