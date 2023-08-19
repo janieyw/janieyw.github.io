@@ -221,6 +221,8 @@ header {
 }
 .process-img img {
     max-width: 60%;
+    display: block;
+    margin: 0 auto;
 }
 .mri-img img {
     margin-bottom: 1.5rem;
