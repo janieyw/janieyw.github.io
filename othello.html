@@ -131,7 +131,7 @@
                             <p>The final algorithm extracted colors using masks and counted pixels to determine dominant colors, accurately 
                                 portraying disk presence and grid layout. This process was demonstrated through output images and console 
                                 messages.</p>
-                    <h3 class="subheading">Object Detection: Hand</h3>
+                <h3 class="subheading">Object Detection: Hand</h3>
                     <h4>Ditinguishing between Players</h4>
                         <p>Initially, I attempted to discern players by locating their hands using the board's position. However, I realized 
                             that identifying the direction of approach sufficed. A hand from the left meant Player 1; from the opposite side, 
@@ -169,7 +169,7 @@
                             </div>
                             <p>However, lighting-induced changes affected disk detection and led to premature game endings, as the program 
                                 assumed no play within TIME_LIMIT. As a result of this, I excluded this scenario as a timeout cause.</p>
-                <h3 class="subheading">Strategy: Spotting Illegal Moves</h3>
+                <h3 class="subheading">Strategy: Spotting Illegal Moves (In Progress)</h3>
                     <h4>If Illegal, Do What?</h4>
                         <p>If an illegal move is detected, players are prompted for a new move. Ignoring this prompt won't affect the game, as 
                             the program's purpose is to aid scoring and gameplay. </p>
@@ -196,35 +196,75 @@
                         <h5>If curr_total_disk_num != prev_total_disk_num + 1</h5>
                             <p>Illegal moves that can disrupt the equality between the current total disk count and the previous total disk 
                                 count plus one include the following:</p>
-                            <ul class="unindented-ul">
-                                <li class="unindented-li">Players attempting to place multiple disks simultaneously.</li>
-                                <li class="unindented-li">Players attempting to place a disk in an occupied cell.</li>
+                            <ul>
+                                <li>Players attempting to place multiple disks simultaneously.</li>
+                                <li>Players attempting to place a disk in an occupied cell.</li>
                             </ul>
                             <p>These two categories of illegal moves can be differentiated by the total number of disks on the board. The 
                                 former involves more than prev_total_disk_num + 1 disks, while the latter involves exactly prev_total_disk_num 
                                 disks.</p>
                         <h5>Ensuring One Disk is Played at a Time</h5>
-                            <ul class="unindented-ul">
-                                <li class="unindented-li">Update prev_disk_num, holding the prior total disks from prev_grid_colors, and 
-                                    total_disk_num from grid_colors.</li>
-                                <li class="unindented-li">If the gap between prev_total_disk_num and the present total_disk_num exceeds one, a 
-                                    warning is shown on the frame upon each 's' key press.</li>
+                            <ul>
+                                <li>Update prev_disk_num, holding the prior total disks from prev_grid_colors, and total_disk_num from grid_colors.</li>
+                                <li>If the gap between prev_total_disk_num and the present total_disk_num exceeds one, a warning is shown on 
+                                    the frame upon each 's' key press.</li>
                             </ul>
                         <h5>Ensuring Disk is Placed in an Empty Cell</h5>
                             <p>If total_disk_num is less than or equal to prev_total_disk_num, a warning appears on each 's' key press.</p>
                         <h5>Ensuring Player Plays the Right Color</h5>
                             <p>With total_disk_num exceeding prev_total_disk_num by one:</p>
-                            <ul class="unindented-ul">
-                                <li class="unindented-li">Obtain the extra non-green element in grid_colors by contrasting arrays with 
-                                    prev_grid_colors.</li>
-                                <li class="unindented-li">Contrast the obtained color element with player_num. If BLACK and player_num is 1 or 
-                                    WHITE and player_num is 2, the correct color is played.</li>
-                                <li class="unindented-li">Else, show a warning on the frame.</li>
+                            <ul>
+                                <li>Obtain the extra non-green element in grid_colors by contrasting arrays with prev_grid_colors.</li>
+                                <li>Contrast the obtained color element with player_num. If BLACK and player_num is 1 or WHITE and player_num 
+                                    is 2, the correct color is played.</li>
+                                <li>Else, show a warning on the frame.</li>
                             </ul>
                     <h4>Flipping</h4>
                         <p>This step is still in progress.</p>
-                <h3 class="subheading">Evaluation</h3>
+                <h3 class="subheading">Evaluation (In Progress)</h3>
+                    <p>From a single round of Othello I played with a friend, the system accurately identified the player's disk count 98 out 
+                        of 112 times, yielding an 87.5% accuracy rate. Yet, this assessment derives solely from one gaming instance. Also, the 
+                        system requires further refinement to reliably detect illegal moves.</p>
+                    <h4>Other Takeaways</h4>
+                        <p>After playing Othello and discussing the score-keeping system's performance with a friend, following insights were 
+                            gathered:</p>
+                        <ul>
+                            <li>Board and disk detection is quite reliable.</li>
+                            <li>Fatigue issue: Frequent 's' key presses for move legality checks can be physically tiring.</li>
+                            <li>Strategy component reliability lacks: Detection accuracy of illegal moves varies. It's more sensitive in 
+                                detecting disks placed atop each other or out-of-turn plays. For instance, it might warn when a player's hand 
+                                pauses before placing a disk or erroneously detect illegal scenarios.</li>
+                            <li>Unenforced illegal moves: Program prompts for corrections, but doesn't enforce the rule. Ignored prompts lead 
+                                to potential inaccurate scores or game outcomes. Strategy identifies illegal moves post-execution instead of 
+                                preventing them.</li>
+                            <li>Turn detection using hand proximity: Identifying turns via hand position is practical, but errors might arise 
+                                from simultaneous hand movement or misidentified hands.</li>
+                            <li>Limited illegal move detection scope: Current program only spots specific illegal moves (e.g., multi-disk 
+                                placement or non-empty cell). Other types may be unaddressed, impacting game accuracy.</li>
+                            <li>Limited testing scope: The proposal lacks details on game testing frequency, lighting, and player diversity. 
+                                More extensive testing can reveal strategy limitations.</li>
+                            <li>Adding a reset functionality would be helpful.</li>
+                        </ul>
                 <h3 class="subheading">Conclusion & Final Thoughts</h3>
+                    <p>Evaluation confirms accurate grid and disk detection. However, system limitations persist, including manual 's' key 
+                        legality checks and inconsistent disk detection, especially for black and white disks. Current hand-based turn 
+                        assignment is also flawed, leading to incorrect turn warnings when hands briefly go undetected. Feedback highlights the 
+                        need for an improved strategy, crucial for Othello's disk flipping. Without it, system effectiveness suffers...</p>
+                    <p>A notable lesson learned is embracing broader problem-solving. Overcomplication hindered tasks; recognizing 64-square 
+                        grid regularity could have eliminated the need for a physical board. Excessive focus on initial algorithm refinement 
+                        overshadowed core problem essence.</p>
+                    <p>Another takeaway: prioritize design before coding. Rushing to incorporate live video gameplay led to an unstructured 
+                        program with an excessively lengthy main.py file. Cleaning and restructuring at project end took substantial time. </p>
+                <h3 class="subheading">References</h3>
+                    <ul class="unindented-ul">
+                        <li class="unindented-li">How to detect game board in image (<a href="https://stackoverflow.com/questions/57185192/how-to-detect-game-board-in-image">StackOverflow</a>)</li>
+                        <li class="unindented-li">Identifying the state of tic-tac-toe board from the image (<a href="https://stackoverflow.com/questions/53684677/identifying-state-of-tic-tac-toe-board-from-image">StackOverflow</a>)</li>
+                        <li class="unindented-li">Board Game Image Recognition using Neural Networks (<a href="https://towardsdatascience.com/board-game-image-recognition-using-neural-networks-116fc876dafa">Joseph Woolf's Medium</a>)</li>
+                        <li class="unindented-li">Play tic-tac-toe with OpenCV and Keras (<a href="https://github.com/tempdata73/tic-tac-toe">tempdata73's GitHub</a>)</li>
+                        <li class="unindented-li">Getting Started with Videos (<a href="https://docs.opencv.org/3.4/dd/d43/tutorial_py_video_display.html">OpenCV</a>)</li>
+                        <li class="unindented-li">Rules of Othello (<a href="https://docs.opencv.org/3.4/dd/d43/tutorial_py_video_display.html">Milton Bradley</a>)</li>
+                        <li class="unindented-li">Hough Line Transform (<a href="https://docs.opencv.org/4.x/d6/d10/tutorial_py_houghlines.html#:~:text=Hough%20Transform%20in%20OpenCV&text=It%20simply%20returns%20an%20array,detection%20before%20applying%20hough%20transform.">OpenCV</a>)</li>
+                    </ul>
                     <p class="bottom-text"></p>
             </div>
         </div>
