@@ -213,37 +213,29 @@ header {
 }
 .image-tooltip {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
-    padding: 5px 10px;
+    padding: 10px 10px;
     opacity: 0; /* Start with the tooltip hidden */
     width: calc(100% - 0.4rem);
+    height: calc(100% - 0.45rem);
     transition: opacity 0.3s;
     text-align: center;
     letter-spacing: .1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .portfolio-img a {
     position: relative;
     display: inline-block;
 }
 .portfolio-img a .image-tooltip {
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0%;
+    left: .2rem;
 }
 .portfolio-img a:hover .image-tooltip {
     opacity: 1;
-}
-.process-img img {
-    max-width: 60%;
-    display: block;
-    margin: 0 auto;
-}
-.mri-img img {
-    margin-bottom: 1.5rem;
-}
-.about-img img:hover {
-    filter: grayscale(70%);
-    transition: 0.9s;
 }
 .portfolio-img {
     display: flex;
@@ -257,6 +249,18 @@ header {
     margin-right: .2rem;
     margin-left: .2rem;
     max-width: 250px;
+}
+.process-img img {
+    max-width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+.mri-img img {
+    margin-bottom: 1.5rem;
+}
+.about-img img:hover {
+    filter: grayscale(70%);
+    transition: 0.9s;
 }
 .gradphoto {
     padding-bottom: 7px;
