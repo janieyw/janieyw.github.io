@@ -104,8 +104,8 @@
                                 merging and circle size thresholds.</p>
                     <h4>Final (and Right) Approach</h4>
                         <h5>Grid Detection</h5>
-                            <div class="prototype-img">
-                                <img src="img/right_approach_grid.jpg" alt="right-approach-grid" />
+                            <div class="mri-img">
+                                <img src="img/right_approach_grid.jpg" alt="right-approach-grid" style="width:60%;" />
                             </div>
                              <p>I eventually realized I could exploit the board's regularities. <span class="highlight">The refined algorithm 
                                 used color filtering to detect the green board, employed contour detection and shape approximation to outline 
@@ -114,8 +114,8 @@
                         <h5>Disk Detection</h5>
                             <p>Using the same logic, I used the regularities of the disks, linking their side lengths to grid cells for color 
                                 detection. This involved identifying corner points for each cell.</p>
-                            <div class="prototype-img">
-                                <img src="img/right_approach_disk-1.jpg" alt="right-approach-cell" />
+                            <div class="mri-img">
+                                <img src="img/right_approach_disk-1.jpg" alt="right-approach-cell" style="width:60%;" />
                             </div>
                                 <p>I created an intersection_points set to gather all 81 intersection points on the grid lines. Sorting these by 
                                 y-coordinates and then x-coordinates ordered them logically. This arrangement was validated using gradient-adjusted 
