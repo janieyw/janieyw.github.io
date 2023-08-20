@@ -44,14 +44,47 @@
                             Apr. 13 - May 9th, 2023</p>
                     </div>
                 </div>
-                <h3 class="subheading">Full Title</h3>
-                    <p>Othello Board & Disk Detection, and Score Tracking with OpenCV</p>
-                <h3 class="subheading">Brief</h3>
+                <div class="mri-img">
+                    <img src="img/othello_2.jpg" alt="othello-board" />
+                </div>
                 <h3 class="subheading">Goal</h3>
+                    <p>This project aims to develop a <span class="highlight">scoring and tracking system for Othello players by analyzing a 
+                        live video feed of the physical game board</span> using OpenCV and Python. It should identify cells and disks, display 
+                        scores, detect hand movements for turn switches, and help rectify illegal moves.</p>
                 <h3 class="subheading">Domain Engineering</h3>
+                    <h4>Capturing Imagery</h4>
+                        <div class="process-container">
+                            <div class="process-img" style="padding-right: .2rem;">
+                                <img src="img/domain_eng.jpg" alt="domain-engineering" />
+                            </div>
+                            <div class="process-list">
+                                <ul class="unindented-ul">
+                                    <li class="unindented-li"><strong>Camera</strong>: iPhone 12 Max as a webcam via Apple’s Desk View feature</li>
+                                    <li class="unindented-li"><strong>Lighting</strong>: regular ceiling lights</li>
+                                    <li class="unindented-li"><strong>Background & Objects</strong>: flat surface without extra green elements beside the board.</li>
+                                </ul>
+                            </div>
+                        </div>
                 <h3 class="subheading">Object Detection: Board & Disks</h3>
+                    <h4>Initial (and Wrong) Approach</h4>
+                        <p>Initially, I became overly fixated on using the Hough transform for grid line and cell detection, despite finding a 
+                            more efficient alternative later on. This consumed nearly a quarter of the project's time.</p>
+                        <h5>Image Processing</h5>
+                            <div class="prototype-img">
+                                <img src="img/wrong_approach.jpg" alt="wrong-approach" />
+                            </div>
+                            <p>Grayscale conversion replaced binary conversion due to the Hough transform's inability to distinguish between 
+                                green and black with binary conversion, as there's no intermediate shade to represent green between black and 
+                                white.</p>
+                        <h5>Grid Detection</h5>
+                    <h4>Final (and Right) Approach</h4>
                 <h3 class="subheading">Object Detection: Hand</h3>
+                    <h4>Ditinguishing between Players</h4>
+                    <h4>Timeout</h4>
                 <h3 class="subheading">Strategy: Spotting Illegal Moves</h3>
+                    <h4>If Illegal, Do What?</h4>
+                    <h4>Identifying Player Turn</h4>
+                    <h4>Caputuring Illegal Moves</h4>
                 <h3 class="subheading">Evaluation</h3>
                 <h3 class="subheading">Conclusion & Final Thoughts</h3>
                     <p class="bottom-text"></p>
