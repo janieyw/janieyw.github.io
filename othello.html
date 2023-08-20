@@ -44,8 +44,8 @@
                             Apr. 13 - May 9th, 2023</p>
                     </div>
                 </div>
-                <div class="mri-img">
-                    <img src="img/othello_2.jpg" alt="othello-board" style="width:60%;"/>
+                <div class="portfolio-title-img">
+                    <img src="img/othello_2.jpg" alt="othello-board"/>
                 </div>
                 <h3 class="subheading">Goal</h3>
                     <p>This project aims to develop a <span class="highlight">scoring and tracking system for Othello players by analyzing a 
@@ -204,9 +204,9 @@
                                 former involves more than prev_total_disk_num + 1 disks, while the latter involves exactly prev_total_disk_num 
                                 disks.</p>
                         <h5>Ensuring One Disk is Played at a Time</h5>
-                            <ul>
-                                <li>Update prev_disk_num, holding the prior total disks from prev_grid_colors, and total_disk_num from grid_colors.</li>
-                                <li>If the gap between prev_total_disk_num and the present total_disk_num exceeds one, a warning is shown on 
+                            <ul class="unindented-ul">
+                                <li class="unindented-li">Update prev_disk_num, holding the prior total disks from prev_grid_colors, and total_disk_num from grid_colors.</li>
+                                <li class="unindented-li">If the gap between prev_total_disk_num and the present total_disk_num exceeds one, a warning is shown on 
                                     the frame upon each 's' key press.</li>
                             </ul>
                         <h5>Ensuring Disk is Placed in an Empty Cell</h5>

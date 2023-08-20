@@ -217,7 +217,7 @@ header {
     max-width: 100%;
 }
 .about-img img,
-.mri-img img {
+.portfolio-title-img img {
     max-width: 90%;
     display: block;
     margin: 0 auto;
@@ -266,7 +266,7 @@ header {
     display: block;
     margin: 0 auto;
 }
-.mri-img img {
+.portfolio-title-img img {
     margin-bottom: 1.5rem;
 }
 .about-img img:hover {
