@@ -183,13 +183,46 @@
                             visible when it's not their turn.</p>
                     <h4>Caputuring Illegal Moves</h4>
                         <h5>New Variables</h5>
+                            <ul class="unindented-ul">
+                                <li class="unindented-li"><strong>prev_grid_colors</strong>: a copy of grid_color in a 2D array format, 
+                                    enabling comparison before and after pressing 's' to save updates.</li>
+                                <li class="unindented-li"><strong>prev_player_num</strong>: initialized as 2, tracks the preceding player. 
+                                    Player 2 plays before and after the leading Player 1.</li>
+                            </ul>
                         <h5>Ensuring Player Plays at Their Turn</h5>
+                            <p>Using prev_player_num, if the current player number matches the list's first element (signifying the previous 
+                                and current players are the same), a warning is shown on the frame. This alert continues until the correct 
+                                player takes their turn.</p>
                         <h5>If curr_total_disk_num != prev_total_disk_num + 1</h5>
+                            <p>Illegal moves that can disrupt the equality between the current total disk count and the previous total disk 
+                                count plus one include the following:</p>
+                            <ul class="unindented-ul">
+                                <li class="unindented-li">Players attempting to place multiple disks simultaneously.</li>
+                                <li class="unindented-li">Players attempting to place a disk in an occupied cell.</li>
+                            </ul>
+                            <p>These two categories of illegal moves can be differentiated by the total number of disks on the board. The 
+                                former involves more than prev_total_disk_num + 1 disks, while the latter involves exactly prev_total_disk_num 
+                                disks.</p>
                         <h5>Ensuring One Disk is Played at a Time</h5>
+                            <ul class="unindented-ul">
+                                <li class="unindented-li">Update prev_disk_num, holding the prior total disks from prev_grid_colors, and 
+                                    total_disk_num from grid_colors.</li>
+                                <li class="unindented-li">If the gap between prev_total_disk_num and the present total_disk_num exceeds one, a 
+                                    warning is shown on the frame upon each 's' key press.</li>
+                            </ul>
                         <h5>Ensuring Disk is Placed in an Empty Cell</h5>
+                            <p>If total_disk_num is less than or equal to prev_total_disk_num, a warning appears on each 's' key press.</p>
                         <h5>Ensuring Player Plays the Right Color</h5>
+                            <p>With total_disk_num exceeding prev_total_disk_num by one:</p>
+                            <ul class="unindented-ul">
+                                <li class="unindented-li">Obtain the extra non-green element in grid_colors by contrasting arrays with 
+                                    prev_grid_colors.</li>
+                                <li class="unindented-li">Contrast the obtained color element with player_num. If BLACK and player_num is 1 or 
+                                    WHITE and player_num is 2, the correct color is played.</li>
+                                <li class="unindented-li">Else, show a warning on the frame.</li>
+                            </ul>
                     <h4>Flipping</h4>
-                        <h5>This step is still in progress.</h5>
+                        <p>This step is still in progress.</p>
                 <h3 class="subheading">Evaluation</h3>
                 <h3 class="subheading">Conclusion & Final Thoughts</h3>
                     <p class="bottom-text"></p>
