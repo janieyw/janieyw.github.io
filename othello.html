@@ -133,7 +133,29 @@
                                 messages.</p>
                     <h3 class="subheading">Object Detection: Hand</h3>
                     <h4>Ditinguishing between Players</h4>
+                        <p>Initially, I attempted to discern players by locating their hands using the board's position. However, I realized 
+                            that identifying the direction of approach sufficed. A hand from the left meant Player 1; from the opposite side, 
+                            Player 2.</p>
+                        <div class="prototype-img">
+                            <img src="img/hand_detection.jpg" alt="hand-detection" />
+                        </div>
+                        <p>Initially, my implementation accounted for a single hand, assuming one hand in the frame. Later, I expanded it to 
+                            accommodate multiple hands as part of the strategy component.</p>
                     <h4>Timeout</h4>
+                        <p><strong>Timeout</strong>, one of the two possible game-ending conditions, can arise from two scenarios:</p>
+                            <ol>
+                                <li>When no hand is detected during the timeout period.</li>
+                                <li>When no move is detected during the timeout period.</li>
+                            </ol>
+                        <p>After conducting several simulations with a friend acting as Player 2, I determined that a 30-second timeout limit 
+                            would be optimal. To denote this duration, I employed a constant variable named TIME_LIMIT.</p>
+                        <h4>No Hand Detected</h4>
+                            <p>To track the hand detection time limit, I created a variable to store the timestamp of the last hand detection. 
+                                When a hand is detected, this variable is updated with the current time. The player's number is displayed in 
+                                the top left corner when a hand is detected. If the time between detections surpasses TIME_LIMIT, the game 
+                                concludes, and the winner is declared alongside the termination reason.</p>
+                        <h4>No Play Detected</h4>
+                            <p></p>
                 <h3 class="subheading">Strategy: Spotting Illegal Moves</h3>
                     <h4>If Illegal, Do What?</h4>
                     <h4>Identifying Player Turn</h4>
