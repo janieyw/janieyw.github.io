@@ -110,4 +110,7 @@
     .image-tooltip {
         opacity: 1;
     }
+    .bottom-text {
+        padding-bottom: 80px;
+    }
 }
