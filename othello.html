@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="mri-img">
-                    <img src="img/othello_2.jpg" alt="othello-board" />
+                    <img src="img/othello_2.jpg" alt="othello-board" style="width:60%;"/>
                 </div>
                 <h3 class="subheading">Goal</h3>
                     <p>This project aims to develop a <span class="highlight">scoring and tracking system for Othello players by analyzing a 
@@ -54,13 +54,13 @@
                 <h3 class="subheading">Domain Engineering</h3>
                     <h4>Capturing Imagery</h4>
                         <div class="process-container">
-                            <div class="process-img" style="padding-right: .2rem;">
+                            <div class="process-img">
                                 <img src="img/domain_eng.jpg" alt="domain-engineering" />
                             </div>
                             <div class="process-list">
                                 <ul class="unindented-ul">
-                                    <li class="unindented-li"><strong>Camera</strong>: iPhone 12 Max as a webcam via Apple’s Desk View feature</li>
-                                    <li class="unindented-li"><strong>Lighting</strong>: regular ceiling lights</li>
+                                    <li class="unindented-li"><strong>Camera</strong>: iPhone 12 Max as a webcam via Apple’s Desk View feature.</li>
+                                    <li class="unindented-li"><strong>Lighting</strong>: regular ceiling light.</li>
                                     <li class="unindented-li"><strong>Background & Objects</strong>: flat surface without extra green elements beside the board.</li>
                                 </ul>
                             </div>
@@ -77,8 +77,61 @@
                                 green and black with binary conversion, as there's no intermediate shade to represent green between black and 
                                 white.</p>
                         <h5>Grid Detection</h5>
+                            <div class="process-container">
+                                <div class="process-img">
+                                    <img src="img/wrong_approach_grid.png" alt="wrong-approach-grid" />
+                                </div>
+                                <div class="process-list">
+                                    <ul class="unindented-ul">
+                                        <li class="unindented-li">Applied Canny edge detection to grayscale video, creating an edge map.</li>
+                                        <li class="unindented-li">Used Hough transform on the edge map to find board lines.</li>
+                                        <li class="unindented-li">Filtered out undesired lines based on length, angle, and proximity.</li>
+                                        <li class="unindented-li">Identified intersection points for corners.</li>
+                                        <li class="unindented-li">Displayed the grid on the original video.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p>I followed steps above for grid detection. However, <span class="highlight">like shadow detection and multiple 
+                                lines for vertical partitions emerged</span>, shown in the image. Despite challenges, I moved forward to disk 
+                                detection.</p>
+                        <h5>Disk Detection</h5>
+                            <div class="prototype-img">
+                                <img src="img/wrong_approach_cell.jpg" alt="wrong-approach-cell" />
+                            </div>
+                            <p>The initial disk detection approach used thresholding, morphology, and the Hough transform. It <span class="highlight">
+                                lestimated disk size based on grid cell length but struggled when the whole board appeared, mistaking it for a cell.
+                                </span> Accurate grid line detection presented challenges, leading to the exploration of solutions like line 
+                                merging and circle size thresholds.</p>
                     <h4>Final (and Right) Approach</h4>
-                <h3 class="subheading">Object Detection: Hand</h3>
+                        <h5>Grid Detection</h5>
+                            <div class="prototype-img">
+                                <img src="img/right_approach_grid.jpg" alt="right-approach-grid" />
+                            </div>
+                             <p>I eventually realized I could exploit the board's regularities. <span class="highlight">The refined algorithm 
+                                used color filtering to detect the green board, employed contour detection and shape approximation to outline 
+                                its shape, and established an accurate 8x8 grid.</span> This approach achieved near-perfect grid identification, 
+                                as shown above.</p>
+                        <h5>Disk Detection</h5>
+                            <p>Using the same logic, I used the regularities of the disks, linking their side lengths to grid cells for color 
+                                detection. This involved identifying corner points for each cell.</p>
+                            <div class="prototype-img">
+                                <img src="img/right_approach_disk-1.jpg" alt="right-approach-cell" />
+                            </div>
+                                <p>I created an intersection_points set to gather all 81 intersection points on the grid lines. Sorting these by 
+                                y-coordinates and then x-coordinates ordered them logically. This arrangement was validated using gradient-adjusted 
+                                color tuples, ensuring correctness.</p>
+                            <div class="prototype-img">
+                                <img src="img/right_approach_disk-2.jpg" alt="right-approach-cell" />
+                            </div>
+                            <p>I initially connected all four corner points for precise color detection but encountered issues due to erroneous 
+                                associations between lines and points. So, I switched to a rectangle-based method using two corner points.</p>
+                            <div class="prototype-img">
+                                <img src="img/right_approach_disk-3.jpg" alt="right-approach-cell" />
+                            </div>
+                            <p>The final algorithm extracted colors using masks and counted pixels to determine dominant colors, accurately 
+                                portraying disk presence and grid layout. This process was demonstrated through output images and console 
+                                messages.</p>
+                    <h3 class="subheading">Object Detection: Hand</h3>
                     <h4>Ditinguishing between Players</h4>
                     <h4>Timeout</h4>
                 <h3 class="subheading">Strategy: Spotting Illegal Moves</h3>
