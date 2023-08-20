@@ -523,27 +523,6 @@
             <!-- <p>&copy; Janie YeongWoo Kim</p> -->
         </footer>
     </div>
-    <script>
-        window.onscroll = function() {
-            stickyNav()
-        };
-        var nav = document.querySelector(".nav");
-        var sticky = nav.offsetTop;
-        function stickyNav() {
-            if (window.pageYOffset > sticky) {
-                nav.classList.add("sticky");
-            } else {
-                nav.classList.remove("sticky");
-            }
-        }
-        // var scrollToTopBtn = document.getElementById("scroll-to-top");
-        // scrollToTopBtn.addEventListener("click", function(event) {
-        //     event.preventDefault();
-        //     window.scrollTo({
-        //         top: 0,
-        //         behavior: "smooth"
-        //     });
-        // });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
