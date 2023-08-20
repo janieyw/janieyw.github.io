@@ -646,4 +646,7 @@ input[type=submit]:hover {
     .modal-content {
         height: 85%;
     }
+    .image-tooltip {
+        opacity: 1;
+    }
 }
