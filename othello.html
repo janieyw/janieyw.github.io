@@ -155,11 +155,41 @@
                                 the top left corner when a hand is detected. If the time between detections surpasses TIME_LIMIT, the game 
                                 concludes, and the winner is declared alongside the termination reason.</p>
                         <h4>No Play Detected</h4>
-                            <p></p>
+                            <div class="process-container">
+                                <div class="process-img">
+                                    <img src="img/no_hand_timeout.png" alt="no_hand_timeout" />
+                                </div>
+                                <div class="process-list">
+                                    <p><span class="highlight">A play was identified by a disk count increase on the board.</span> To handle 
+                                        timeouts, I tracked the previous disk count as "prev_disk_num" and checked if the current count 
+                                        exceeded it by 1 after a player's turn. Time of last play detection was stored as 
+                                        "last_play_detected_time," updated when the count increased by one. If the time interval surpassed 
+                                        TIME_LIMIT, the game ended, revealing the winner and termination reason.</p>
+                                </div>
+                            </div>
+                            <p>However, lighting-induced changes affected disk detection and led to premature game endings, as the program 
+                                assumed no play within TIME_LIMIT. As a result of this, I excluded this scenario as a timeout cause.</p>
                 <h3 class="subheading">Strategy: Spotting Illegal Moves</h3>
                     <h4>If Illegal, Do What?</h4>
+                        <p>If an illegal move is detected, players are prompted for a new move. Ignoring this prompt won't affect the game, as 
+                            the program's purpose is to aid scoring and gameplay. </p>
+                        <p>Initially, warnings were console-based, but user feedback from a test round led to displaying them in the output 
+                            video, incorporated in the final system.</p>
                     <h4>Identifying Player Turn</h4>
+                        <p>Initially, turns were determined by the nearest hand to the board's center using one hand. However, I improved the 
+                            system to consider multiple hands and account for hand-placement areas next to the board. Now, the system detects 
+                            all hands, calculates the board's center, measures distances between hands and the center, and assigns player 
+                            numbers based on proximity. This change guarantees players don't need to be concerned about their hands being 
+                            visible when it's not their turn.</p>
                     <h4>Caputuring Illegal Moves</h4>
+                        <h5>New Variables</h5>
+                        <h5>Ensuring Player Plays at Their Turn</h5>
+                        <h5>If curr_total_disk_num != prev_total_disk_num + 1</h5>
+                        <h5>Ensuring One Disk is Played at a Time</h5>
+                        <h5>Ensuring Disk is Placed in an Empty Cell</h5>
+                        <h5>Ensuring Player Plays the Right Color</h5>
+                    <h4>Flipping</h4>
+                        <h5>This step is still in progress.</h5>
                 <h3 class="subheading">Evaluation</h3>
                 <h3 class="subheading">Conclusion & Final Thoughts</h3>
                     <p class="bottom-text"></p>
