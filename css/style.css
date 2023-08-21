@@ -16,7 +16,6 @@ h1, h2, h3, h4, h5 {
 }
 h1 {
     font-size: 3.2rem;
-    color: #FFFFFF;
     font-weight: 450;
     animation: jump-animation 3.5s ease infinite normal;
     letter-spacing: 0.2rem;
@@ -65,14 +64,7 @@ h4, h5 {
     letter-spacing: .1rem;
 }
 .other-header {
-    display: flex;
     height: 30px;
-    align-items: center;
-    justify-content: center;
-}
-.other-header h1, 
-.other-header h2 {
-    display: none;
 }
 p {
     font-size: 1rem;
@@ -96,7 +88,6 @@ th {
     text-align: center;
     background-color: #E9E9E9;
 }
-
 .unindented-ul {
     padding: 0; 
     margin: 0;
@@ -275,7 +266,7 @@ header {
     filter: grayscale(70%);
     transition: 0.9s;
 }
-.column-imgs {
+.column-img-container {
     position: fixed;
     bottom: 10px;
     left: 0;
