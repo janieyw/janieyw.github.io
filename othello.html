@@ -88,27 +88,27 @@
                                     </ul>
                                 </div>
                             </div>
-                            <p>I followed steps above for grid detection. However, <span class="highlight">issues like shadow detection and multiple 
-                                lines for vertical partitions emerged</span>, as shown in the image. I set these aside and I moved forward to disk 
-                                detection.</p>
+                            <p>I followed the steps above for grid detection. However, <span class="highlight">issues like shadow detection and 
+                                multiple lines for vertical partitions emerged</span>, as shown in the image. I set these aside and I moved 
+                                forward to disk detection.</p>
                         <h5>3.1.3. Disk Detection</h5>
                             <div class="side-by-side-img-container">
                                 <img src="img/wrong-approach-cell_1.jpg" alt="wrong-approach-cell" class="side-by-side-img"/>
                                 <img src="img/wrong-approach-cell_2.jpg" alt="wrong-approach-cell" class="side-by-side-img"/>
                             </div>
-                            <p>The initial disk detection approach used thresholding, morphology, and the Hough transform. It <span class="highlight">
-                                lestimated disk size based on grid cell length but struggled when the whole board appeared, mistaking it for a cell.
-                                </span> Accurate grid line detection presented challenges, leading to the exploration of solutions like line 
-                                merging and circle size thresholds.</p>
+                            <p>The initial disk detection approach used thresholding, morphology, and the Hough transform. It 
+                                <span class="highlight">estimated disk size based on grid cell length but struggled when the whole board 
+                                appeared, mistaking it for a cell</span>. Accurate grid line detection presented challenges, leading to the 
+                                exploration of solutions like line merging and circle size thresholds.</p>
                     <h4>3.2. Final (and Right) Approach</h4>
                         <h5>3.2.1. Grid Detection</h5>
                             <div class="process-container">
                                 <img src="img/right-approach-grid.jpg" alt="right-approach-grid"  class="process-side-img"/>
                                 <div class="process-list">
-                                    <p>I eventually realized I could exploit the board's regularities. <span class="highlight">The refined algorithm 
-                                        used color filtering to detect the green board, employed contour detection and shape approximation to outline 
-                                        its shape, and established an accurate 8x8 grid.</span> This approach achieved near-perfect grid identification, 
-                                        as shown above.</p>
+                                    <p>I eventually realized I could exploit the board's regularities. <span class="highlight">The refined 
+                                        algorithm used color filtering to detect the green board, employed contour detection and shape 
+                                        approximation to outline its shape, and established an accurate 8x8 grid.</span> This approach 
+                                        achieved near-perfect grid identification, as shown above.</p>
                                 </div>
                             </div>
                         <h5>3.2.2. Disk Detection</h5>
@@ -117,9 +117,9 @@
                             <div class="process-container">
                                 <img src="img/right-approach-disk_1.jpg" alt="right-approach-grid" class="process-side-img"/>
                                 <div class="process-list">
-                                    <p>I created an intersection_points set to gather all 81 intersection points on the grid lines. Sorting these by 
-                                        y-coordinates and then x-coordinates ordered them logically. This arrangement was validated using gradient-adjusted 
-                                        color tuples, ensuring correctness.</p>
+                                    <p>I created an intersection_points set to gather all 81 intersection points on the grid lines. Sorting 
+                                        these by y-coordinates and then x-coordinates ordered them logically. This arrangement was validated 
+                                        using gradient-adjusted color tuples, ensuring correctness.</p>
                                 </div>
                             </div>
                             <div class="side-by-side-img-container">
@@ -136,7 +136,7 @@
                                 dominant colors</span>, accurately portraying disk presence and grid layout as shown in the above output image 
                                 and console message.</p>
                 <h3 class="subheading">4. Object Detection: Hand</h3>
-                    <h4>4.1. Ditinguishing between Players</h4>
+                    <h4>4.1. Distinguishing between Players</h4>
                         <p>Initially, I planned to identify players through their hand positions relative to the board's location. However, I 
                             realized that <span class="highlight">determining the direction of approach sufficed</span>. For example, a hand 
                             from the left meant Player 1; from the opposite side, Player 2.</p>
@@ -187,7 +187,7 @@
                             center, and assigns player numbers based on proximity.</span> This change guarantees players don't need to be 
                             concerned about their hands being 
                             visible when it's not their turn.</p>
-                    <h4>5.3. Caputuring Illegal Moves</h4>
+                    <h4>5.3. Capturing Illegal Moves</h4>
                         <h5>5.3.1. New Variables</h5>
                             <ul class="unindented-ul">
                                 <li class="unindented-li"><strong>prev_grid_colors</strong>: a copy of grid_color in a 2D array format, 
@@ -239,7 +239,7 @@
                                 moves varies. It's more sensitive in detecting disks placed atop each other or out-of-turn plays. For instance, 
                                 it might warn when a player's hand pauses before placing a disk or erroneously detect illegal scenarios.</li>
                             <li class="unindented-li"><strong>Unenforced illegal moves</strong>: Program prompts for corrections, but doesn't 
-                                enforce the rule. Ignored prompts lead to potential inaccurate scores or game outcomes. Strategy identifies 
+                                enforce the rule. Ignored prompts lead to potentially inaccurate scores or game outcomes. Strategy identifies 
                                 illegal moves post-execution instead of preventing them.</li>
                             <li class="unindented-li"><strong>Turn detection using hand proximity</strong>: Identifying turns via hand position 
                                 is practical, but errors might arise from simultaneous hand movement or misidentified hands.</li>
