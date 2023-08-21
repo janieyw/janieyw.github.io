@@ -101,7 +101,9 @@
     }
     .about-img img,
     .mri-img, 
-    .process-img img {
+    .process-img img,
+    .process-side-img,
+    .portfolio-title-img img {
         max-width: 100%;
     }
     .modal-content {
@@ -112,5 +114,13 @@
     }
     .bottom-text {
         padding-bottom: 80px;
+    }
+    .process-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    }
+    .process-list {
+        flex: 1;
+        width: 100%; /* Full width in mobile view */
     }
 }
