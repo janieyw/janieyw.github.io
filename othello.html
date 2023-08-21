@@ -54,7 +54,7 @@
                 <h3 class="subheading">2. Domain Engineering</h3>
                     <h4>2.1. Capturing Imagery</h4>
                         <div class="process-container">
-                            <img src="img/domain_eng.jpg" alt="domain-engineering" class="process-side-img"/>
+                            <img src="img/domain-eng.jpg" alt="domain-engineering" class="process-side-img"/>
                             <div class="process-list">
                                 <ul class="unindented-ul">
                                     <li class="unindented-li"><strong>Camera</strong>: iPhone 12 Max as a webcam via Apple’s Desk View feature.</li>
@@ -69,15 +69,15 @@
                             more efficient alternative later on. This consumed nearly a quarter of the project's time.</p>
                         <h5>3.1.1. Image Processing</h5>
                             <div class="side-by-side-img-container">
-                                <img src="img/wrong_approach-1.jpg" alt="wrong-approach" class="side-by-side-img"/>
-                                <img src="img/wrong_approach-2.jpg" alt="wrong-approach" class="side-by-side-img"/>
+                                <img src="img/wrong-approach_1.jpg" alt="wrong-approach" class="side-by-side-img"/>
+                                <img src="img/wrong-approach_2.jpg" alt="wrong-approach" class="side-by-side-img"/>
                             </div>
                             <p>Grayscale conversion replaced binary conversion due to the Hough transform's inability to distinguish between 
                                 green and black with binary conversion, as there's no intermediate shade to represent green between black and 
                                 white.</p>
                         <h5>3.1.2. Grid Detection</h5>
                             <div class="process-container">
-                                <img src="img/wrong_approach_grid.png" alt="wrong-approach-grid" class="process-side-img"/>
+                                <img src="img/wrong-approach-grid.png" alt="wrong-approach-grid" class="process-side-img"/>
                                 <div class="process-list">
                                     <ul class="unindented-ul">
                                         <li class="unindented-li">Applied Canny edge detection to grayscale video, creating an edge map.</li>
@@ -93,8 +93,8 @@
                                 detection.</p>
                         <h5>3.1.3. Disk Detection</h5>
                             <div class="side-by-side-img-container">
-                                <img src="img/wrong_approach_cell-1.jpg" alt="wrong-approach-cell" class="side-by-side-img"/>
-                                <img src="img/wrong_approach_cell-1.jpg" alt="wrong-approach-cell" class="side-by-side-img"/>
+                                <img src="img/wrong-approach-cell_1.jpg" alt="wrong-approach-cell" class="side-by-side-img"/>
+                                <img src="img/wrong-approach-cell_2.jpg" alt="wrong-approach-cell" class="side-by-side-img"/>
                             </div>
                             <p>The initial disk detection approach used thresholding, morphology, and the Hough transform. It <span class="highlight">
                                 lestimated disk size based on grid cell length but struggled when the whole board appeared, mistaking it for a cell.
@@ -103,7 +103,7 @@
                     <h4>3.2. Final (and Right) Approach</h4>
                         <h5>3.2.1. Grid Detection</h5>
                             <div class="process-container">
-                                <img src="img/right_approach_grid.jpg" alt="right-approach-grid"  class="process-side-img"/>
+                                <img src="img/right-approach-grid.jpg" alt="right-approach-grid"  class="process-side-img"/>
                                 <div class="process-list">
                                     <p>I eventually realized I could exploit the board's regularities. <span class="highlight">The refined algorithm 
                                         used color filtering to detect the green board, employed contour detection and shape approximation to outline 
@@ -115,7 +115,7 @@
                             <p>Using the same logic, I used the regularities of the disks, <span class="highlight">linking their side lengths 
                                 to grid cells for color detection</span>. This involved identifying corner points for each cell.</p>
                             <div class="process-container">
-                                <img src="img/right_approach_disk-1.jpg" alt="right-approach-grid" class="process-side-img"/>
+                                <img src="img/right-approach-disk_1.jpg" alt="right-approach-grid" class="process-side-img"/>
                                 <div class="process-list">
                                     <p>I created an intersection_points set to gather all 81 intersection points on the grid lines. Sorting these by 
                                         y-coordinates and then x-coordinates ordered them logically. This arrangement was validated using gradient-adjusted 
@@ -123,14 +123,14 @@
                                 </div>
                             </div>
                             <div class="side-by-side-img-container">
-                                <img src="img/right_approach_disk_2-1.jpg" alt="right-approach-cell" class="side-by-side-img"/>
-                                <img src="img/right_approach_disk_2-2.jpg" alt="right-approach-cell" class="side-by-side-img"/>
+                                <img src="img/right-approach-disk_2_1.jpg" alt="right-approach-cell" class="side-by-side-img"/>
+                                <img src="img/right-approach-disk_2_2.jpg" alt="right-approach-cell" class="side-by-side-img"/>
                             </div>
                             <p>I <span class="highlight">initially connected all four corner points for precise color detection</span> but 
                                 encountered issues due to erroneous associations between lines and points. So, I <span class="highlight">
                                 switched to a rectangle-based method using two corner points</span>.</p>
                             <div class="prototype-img">
-                                <img src="img/right_approach_disk-3.png" alt="right-approach-cell" />
+                                <img src="img/right-approach-disk_3.png" alt="right-approach-cell" />
                             </div>
                             <p>The final algorithm <span class="highlight">extracted colors using masks and counted pixels to determine 
                                 dominant colors</span>, accurately portraying disk presence and grid layout as shown in the above output image 
@@ -141,8 +141,8 @@
                             realized that <span class="highlight">determining the direction of approach sufficed</span>. For example, a hand 
                             from the left meant Player 1; from the opposite side, Player 2.</p>
                         <div class="side-by-side-img-container">
-                            <img src="img/hand_detection-1.jpg" alt="hand-detection" class="side-by-side-img"/>
-                            <img src="img/hand_detection-2.jpg" alt="hand-detection" class="side-by-side-img"/>
+                            <img src="img/hand-detection_1.jpg" alt="hand-detection" class="side-by-side-img"/>
+                            <img src="img/hand-detection_2.jpg" alt="hand-detection" class="side-by-side-img"/>
                         </div>
                         <p>Originally designed for a single hand, the system later evolved to <span class="highlight">accommodate multiple 
                             hands</span> for the strategy component.</p>
@@ -162,7 +162,7 @@
                                 concludes, and the winner is declared alongside the termination reason.</p>
                         <h5>4.2.2. No Play Detected</h5>
                             <div class="process-container">
-                                <img src="img/no_hand_timeout.jpg" alt="no_hand_timeout" class="process-side-img"/>
+                                <img src="img/no-hand-timeout.jpg" alt="no_hand_timeout" class="process-side-img"/>
                                 <div class="process-list">
                                     <p><span class="highlight">A play was identified by a disk count increase on the board.</span> To handle 
                                         timeouts, I tracked the previous disk count as "prev_disk_num" and checked if the current count 
