@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="portfolio-title-img">
-                    <img src="img/othello_2.jpg" alt="othello-board"/>
+                    <img src="img/othello.jpg" alt="othello-board"/>
                 </div>
                 <h3 class="subheading">1. Goal</h3>
                     <p>This project aims to develop a <span class="highlight">scoring and tracking system for Othello players by analyzing a 
@@ -68,8 +68,9 @@
                         <p>Initially, I became overly fixated on using the Hough transform for grid line and cell detection, despite finding a 
                             more efficient alternative later on. This consumed nearly a quarter of the project's time.</p>
                         <h5>3.1.1. Image Processing</h5>
-                            <div class="prototype-img">
-                                <img src="img/wrong_approach.jpg" alt="wrong-approach" />
+                            <div class="side-by-side-img-container">
+                                <img src="img/wrong_approach-1.jpg" alt="wrong-approach" class="side-by-side-img"/>
+                                <img src="img/wrong_approach-2.jpg" alt="wrong-approach" class="side-by-side-img"/>
                             </div>
                             <p>Grayscale conversion replaced binary conversion due to the Hough transform's inability to distinguish between 
                                 green and black with binary conversion, as there's no intermediate shade to represent green between black and 
@@ -91,8 +92,9 @@
                                 lines for vertical partitions emerged</span>, as shown in the image. I set these aside and I moved forward to disk 
                                 detection.</p>
                         <h5>3.1.3. Disk Detection</h5>
-                            <div class="prototype-img">
-                                <img src="img/wrong_approach_cell.jpg" alt="wrong-approach-cell" />
+                            <div class="side-by-side-img-container">
+                                <img src="img/wrong_approach_cell-1.jpg" alt="wrong-approach-cell" class="side-by-side-img"/>
+                                <img src="img/wrong_approach_cell-1.jpg" alt="wrong-approach-cell" class="side-by-side-img"/>
                             </div>
                             <p>The initial disk detection approach used thresholding, morphology, and the Hough transform. It <span class="highlight">
                                 lestimated disk size based on grid cell length but struggled when the whole board appeared, mistaking it for a cell.
@@ -110,8 +112,8 @@
                                 </div>
                             </div>
                         <h5>3.2.2. Disk Detection</h5>
-                            <p>Using the same logic, I used the regularities of the disks, linking their side lengths to grid cells for color 
-                                detection. This involved identifying corner points for each cell.</p>
+                            <p>Using the same logic, I used the regularities of the disks, <span class="highlight">linking their side lengths 
+                                to grid cells for color detection</span>. This involved identifying corner points for each cell.</p>
                             <div class="process-container">
                                 <img src="img/right_approach_disk-1.jpg" alt="right-approach-grid" class="process-side-img"/>
                                 <div class="process-list">
@@ -120,35 +122,39 @@
                                         color tuples, ensuring correctness.</p>
                                 </div>
                             </div>
-                            <div class="prototype-img">
-                                <img src="img/right_approach_disk-2.jpg" alt="right-approach-cell" />
+                            <div class="side-by-side-img-container">
+                                <img src="img/right_approach_disk_2-1.jpg" alt="right-approach-cell" class="side-by-side-img"/>
+                                <img src="img/right_approach_disk_2-2.jpg" alt="right-approach-cell" class="side-by-side-img"/>
                             </div>
-                            <p>I initially connected all four corner points for precise color detection but encountered issues due to erroneous 
-                                associations between lines and points. So, I switched to a rectangle-based method using two corner points.</p>
+                            <p>I <span class="highlight">initially connected all four corner points for precise color detection</span> but 
+                                encountered issues due to erroneous associations between lines and points. So, I <span class="highlight">
+                                switched to a rectangle-based method using two corner points</span>.</p>
                             <div class="prototype-img">
-                                <img src="img/right_approach_disk-3.jpg" alt="right-approach-cell" />
+                                <img src="img/right_approach_disk-3.png" alt="right-approach-cell" />
                             </div>
-                            <p>The final algorithm extracted colors using masks and counted pixels to determine dominant colors, accurately 
-                                portraying disk presence and grid layout. This process was demonstrated through output images and console 
-                                messages.</p>
+                            <p>The final algorithm <span class="highlight">extracted colors using masks and counted pixels to determine 
+                                dominant colors</span>, accurately portraying disk presence and grid layout as shown in the above output image 
+                                and console message.</p>
                 <h3 class="subheading">4. Object Detection: Hand</h3>
                     <h4>4.1. Ditinguishing between Players</h4>
-                        <p>Initially, I attempted to discern players by locating their hands using the board's position. However, I realized 
-                            that identifying the direction of approach sufficed. A hand from the left meant Player 1; from the opposite side, 
-                            Player 2.</p>
-                        <div class="prototype-img">
-                            <img src="img/hand_detection.jpg" alt="hand-detection" />
+                        <p>Initially, I planned to identify players through their hand positions relative to the board's location. However, I 
+                            realized that <span class="highlight">determining the direction of approach sufficed</span>. For example, a hand 
+                            from the left meant Player 1; from the opposite side, Player 2.</p>
+                        <div class="side-by-side-img-container">
+                            <img src="img/hand_detection-1.jpg" alt="hand-detection" class="side-by-side-img"/>
+                            <img src="img/hand_detection-2.jpg" alt="hand-detection" class="side-by-side-img"/>
                         </div>
-                        <p>Initially, my implementation accounted for a single hand, assuming one hand in the frame. Later, I expanded it to 
-                            accommodate multiple hands as part of the strategy component.</p>
+                        <p>Originally designed for a single hand, the system later evolved to <span class="highlight">accommodate multiple 
+                            hands</span> for the strategy component.</p>
                     <h4>4.2. Timeout</h4>
                         <p><strong>Timeout</strong>, one of the two possible game-ending conditions, can arise from two scenarios:</p>
                             <ol>
                                 <li>When no hand is detected during the timeout period.</li>
                                 <li>When no move is detected during the timeout period.</li>
                             </ol>
-                        <p>After conducting several simulations with a friend acting as Player 2, I determined that a 30-second timeout limit 
-                            would be optimal. To denote this duration, I employed a constant variable named TIME_LIMIT.</p>
+                        <p>After conducting several simulations with a friend acting as Player 2, I determined that a <span class="highlight">
+                            30-second timeout limit</span> would be optimal. A constant variable named TIME_LIMIT was created to denote this 
+                            duration.</p>
                         <h5>4.2.1. No Hand Detected</h5>
                             <p>To track the hand detection time limit, I created a variable to store the timestamp of the last hand detection. 
                                 When a hand is detected, this variable is updated with the current time. The player's number is displayed in 
@@ -156,28 +162,30 @@
                                 concludes, and the winner is declared alongside the termination reason.</p>
                         <h5>4.2.2. No Play Detected</h5>
                             <div class="process-container">
-                                <img src="img/no_hand_timeout.png" alt="no_hand_timeout" class="process-side-img"/>
+                                <img src="img/no_hand_timeout.jpg" alt="no_hand_timeout" class="process-side-img"/>
                                 <div class="process-list">
                                     <p><span class="highlight">A play was identified by a disk count increase on the board.</span> To handle 
                                         timeouts, I tracked the previous disk count as "prev_disk_num" and checked if the current count 
                                         exceeded it by 1 after a player's turn. Time of last play detection was stored as 
                                         "last_play_detected_time," updated when the count increased by one. If the time interval surpassed 
                                         TIME_LIMIT, the game ended, revealing the winner and termination reason.</p>
-                                    <p>However, lighting-induced changes affected disk detection and led to premature game endings, as the program 
-                                        assumed no play within TIME_LIMIT. As a result of this, I excluded this scenario as a timeout cause.</p>
+                                    <p><span class="highlight">However, lighting-induced changes affected disk detection and led to premature 
+                                        game endings</span>, as the program assumed no play within TIME_LIMIT. As a result of this, I <strong>
+                                        excluded this scenario as a timeout cause</strong>.</p>
                                 </div>
                             </div>
                 <h3 class="subheading">5. Strategy: Spotting Illegal Moves (In Progress)</h3>
                     <h4>5.1. If Illegal, Do What?</h4>
-                        <p>If an illegal move is detected, players are prompted for a new move. Ignoring this prompt won't affect the game, as 
-                            the program's purpose is to aid scoring and gameplay. </p>
+                        <p><span class="highlight">If an illegal move is detected, players are prompted for a new move. Ignoring this prompt 
+                            won't affect the game, as the program's purpose is to aid scoring and gameplay.</span></p>
                         <p>Initially, warnings were console-based, but user feedback from a test round led to displaying them in the output 
                             video, incorporated in the final system.</p>
                     <h4>5.2. Identifying Player Turn</h4>
                         <p>Initially, turns were determined by the nearest hand to the board's center using one hand. However, I improved the 
-                            system to consider multiple hands and account for hand-placement areas next to the board. Now, the system detects 
-                            all hands, calculates the board's center, measures distances between hands and the center, and assigns player 
-                            numbers based on proximity. This change guarantees players don't need to be concerned about their hands being 
+                            system to consider multiple hands and account for hand-placement areas next to the board. Now, the system 
+                            <span class="highlight">detects all hands, calculates the board's center, measures distances between hands and the 
+                            center, and assigns player numbers based on proximity.</span> This change guarantees players don't need to be 
+                            concerned about their hands being 
                             visible when it's not their turn.</p>
                     <h4>5.3. Caputuring Illegal Moves</h4>
                         <h5>5.3.1. New Variables</h5>
@@ -218,41 +226,42 @@
                                 <li>Else, show a warning on the frame.</li>
                             </ul>
                     <h4>5.4. Flipping</h4>
-                        <p>This step is still in progress.</p>
+                        <p><i>This step is still in progress.</i></p>
                 <h3 class="subheading">6. Evaluation (In Progress)</h3>
                     <p>From a single round of Othello I played with a friend, the system accurately identified the player's disk count 98 out 
-                        of 112 times, yielding an 87.5% accuracy rate. Yet, this assessment derives solely from one gaming instance. Also, the 
-                        system requires further refinement to reliably detect illegal moves.</p>
+                        of 112 times, yielding an <span class="highlight">87.5% accuracy rate</span>. Yet, this assessment derives solely from 
+                        one gaming instance. Also, the system requires further refinement to reliably detect illegal moves.</p>
                     <h4>6.1. Other Takeaways</h4>
-                        <p>After playing Othello and discussing the score-keeping system's performance with a friend, following insights were 
-                            gathered:</p>
-                        <ul>
-                            <li>Board and disk detection is quite reliable.</li>
-                            <li>Fatigue issue: Frequent 's' key presses for move legality checks can be physically tiring.</li>
-                            <li>Strategy component reliability lacks: Detection accuracy of illegal moves varies. It's more sensitive in 
-                                detecting disks placed atop each other or out-of-turn plays. For instance, it might warn when a player's hand 
-                                pauses before placing a disk or erroneously detect illegal scenarios.</li>
-                            <li>Unenforced illegal moves: Program prompts for corrections, but doesn't enforce the rule. Ignored prompts lead 
-                                to potential inaccurate scores or game outcomes. Strategy identifies illegal moves post-execution instead of 
-                                preventing them.</li>
-                            <li>Turn detection using hand proximity: Identifying turns via hand position is practical, but errors might arise 
-                                from simultaneous hand movement or misidentified hands.</li>
-                            <li>Limited illegal move detection scope: Current program only spots specific illegal moves (e.g., multi-disk 
-                                placement or non-empty cell). Other types may be unaddressed, impacting game accuracy.</li>
-                            <li>Limited testing scope: The proposal lacks details on game testing frequency, lighting, and player diversity. 
-                                More extensive testing can reveal strategy limitations.</li>
-                            <li>Adding a reset functionality would be helpful.</li>
+                        <ul class="unindented-ul">
+                            <li class="unindented-li"><strong>Fatigue issue</strong>: Frequent 's' key presses for move legality checks can be 
+                                physically tiring.</li>
+                            <li class="unindented-li"><strong>Strategy component reliability lacks</strong>: Detection accuracy of illegal 
+                                moves varies. It's more sensitive in detecting disks placed atop each other or out-of-turn plays. For instance, 
+                                it might warn when a player's hand pauses before placing a disk or erroneously detect illegal scenarios.</li>
+                            <li class="unindented-li"><strong>Unenforced illegal moves</strong>: Program prompts for corrections, but doesn't 
+                                enforce the rule. Ignored prompts lead to potential inaccurate scores or game outcomes. Strategy identifies 
+                                illegal moves post-execution instead of preventing them.</li>
+                            <li class="unindented-li"><strong>Turn detection using hand proximity</strong>: Identifying turns via hand position 
+                                is practical, but errors might arise from simultaneous hand movement or misidentified hands.</li>
+                            <li class="unindented-li"><strong>Limited illegal move detection scope</strong>: Current program only spots 
+                                specific illegal moves (e.g., multi-disk placement or non-empty cell). Other types may be unaddressed, 
+                                impacting game accuracy.</li>
+                            <li class="unindented-li"><strong>Limited testing scope</strong>: The proposal lacks details on game testing 
+                                frequency, lighting, and player diversity. More extensive testing can reveal strategy limitations.</li>
+                            <li class="unindented-li">Adding a <strong>reset functionality</strong> would be helpful.</li>
                         </ul>
                 <h3 class="subheading">7. Reflection on Evaluation Results</h3>
-                    <p>Evaluation confirms accurate grid and disk detection. However, system limitations persist, including manual 's' key 
-                        legality checks and inconsistent disk detection, especially for black and white disks. Current hand-based turn 
-                        assignment is also flawed, leading to incorrect turn warnings when hands briefly go undetected. Feedback highlights the 
-                        need for an improved strategy, crucial for Othello's disk flipping. Without it, system effectiveness suffers...</p>
-                    <p>A notable lesson learned is embracing broader problem-solving. Overcomplication hindered tasks; recognizing 64-square 
-                        grid regularity could have eliminated the need for a physical board. Excessive focus on initial algorithm refinement 
+                    <p>Evaluation confirms fairly accurate grid and disk detection, but <span class="highlight">limitations persist, including 
+                        manual 's' key legality checks and inconsistent disk detection</span>. <span class="highlight">Current hand-based turn 
+                        allocation proves flawed</span>, occasionally triggering erroneous turn warnings during brief hand detection lapses. 
+                        Feedback highlights the <span class="highlight">need for an improved strategy, especially for Othello's disk flipping
+                        </span>. Without it, system effectiveness suffers...</p>
+                    <p>A notable lesson learned is <span class="highlight">embracing broader problem-solving</span>. Recognizing 64-square 
+                        grid regularity could have even spared the need for a physical board. Overemphasis on refining the initial algorithm 
                         overshadowed core problem essence.</p>
-                    <p>Another takeaway: prioritize design before coding. Rushing to incorporate live video gameplay led to an unstructured 
-                        program with an excessively lengthy main.py file. Cleaning and restructuring at project end took substantial time. </p>
+                    <p>Another takeaway: <span class="highlight">prioritize thorough problem analysis and program design before diving into 
+                        coding</span>. Rushing to incorporate live video gameplay led to an unstructured program with an excessively lengthy 
+                        main.py file. Cleaning and restructuring at project end took substantial time. </p>
                 <h3 class="subheading">8. References</h3>
                     <ul class="unindented-ul">
                         <li class="unindented-li">How to detect game board in image (<a href="https://stackoverflow.com/questions/57185192/how-to-detect-game-board-in-image">StackOverflow</a>)</li>
