@@ -1,7 +1,4 @@
 @media only screen and (min-width: 800px) {
-    h1 {
-        font-size: 4rem;
-    }
     .container {
         display: grid;
         grid-template-columns: 25% 50% 25%;
@@ -12,9 +9,6 @@
     }
     .other-header h1 {
         font-size: 4rem;
-    }
-    header {
-        height: 15vh;
     }
     .nav {
         text-align: right;
@@ -59,7 +53,13 @@
     .portfolio-img,
     .bottom-text {
         padding-bottom: 150px;
-    }   
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    header {
+        height: 15vh;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -73,23 +73,9 @@
         grid-column: -1 / 1;
         grid-row: 1 / 1;
     }
-    h1 { 
-        font-size: 2.8rem;
-    }
     .index-header h2 {
         font-size: 1rem;
         letter-spacing: .05rem;
-    }
-    header {
-        background-image: url("../img/header_mobile.jpg");
-        background-size: cover; 
-        height: 100vh;
-        grid-column: -1 / 1;
-        grid-row: 1 / 1;
-    }
-    nav li {
-        padding-right: 0.4rem;
-        padding-left: 0.4rem;
     }
     .nav {
         padding: 0;
@@ -129,5 +115,26 @@
     .side-by-side-img {
         width: 100%;
         margin: .2rem 0;
+    }
+    .contact-btn:hover,
+    .scroll-to-top-btn:hover,
+    .paper-btn:hover {
+        color: #000000;
+        background-color: #F5F5F5;
+        cursor: pointer;
+    }
+    header {
+        background-image: url("../img/header_mobile.jpg");
+        background-size: cover; 
+        height: 100vh;
+        grid-column: -1 / 1;
+        grid-row: 1 / 1;
+    }
+    nav li {
+        padding-right: 0.4rem;
+        padding-left: 0.4rem;
+    }
+    h1 { 
+        font-size: 2.8rem;
     }
 }

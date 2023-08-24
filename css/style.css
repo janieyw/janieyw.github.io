@@ -463,7 +463,7 @@ header {
 }
 .contact-btn:hover,
 .scroll-to-top-btn:hover,
-.paper-btn:hover  {
+.paper-btn:hover {
     color: #FFFFFF;
     background-color: #000000;
     opacity: .7;
